@@ -1,0 +1,195 @@
+$section_background_color: #eff1f5;
+$number_color_higest:#e3e4eb;
+$header_color_h3:#e3b886;
+$text_color:#395084;
+$randomNumber :random(300);
+
+@keyframes floating {
+  from { transform: translate(0,  0px); }
+  65%  { transform: translate(0, 15px); }
+  to   { transform: translate(0, -0px); }
+}
+@keyframes floating2 {
+  from { transform: translate(0,  0px); }
+  65%  { transform: translate(0, -15px); }
+  to   { transform: translate(0, -0px); }
+}
+@keyframes circle {
+  from { transform: translate(0,  0px); }
+  50%  { transform: translate(-50px, -50px); }
+  to   { transform: translate(0, -0px); }
+}
+@keyframes circle2 {
+  from { transform: translate(0,  0px); }
+  50%  { transform: translate(-50px, 0px); }
+  to   { transform: translate(0, -0px); }
+}
+@keyframes latidos {
+  from { transform: none; }
+  50% { transform: scale(1.2); }
+  to { transform: none; }
+}
+
+
+
+@media screen and (min-width: 1024px) {
+
+  .health_section{
+    height: 180%;
+    display: block;
+    width: 100%;
+    background: $section_background_color url("../images/section4.png") right no-repeat ;
+    z-index: 8;
+    .content{
+      z-index: 15;
+      width: 80%;
+      height: 100%;
+      position: absolute;
+      margin-left: 10%;
+      .health_hed1{
+        font-size: 120pt;
+        font-weight: 100;
+        color: $number_color_higest;
+        text-transform: uppercase;
+        display: block;
+        float: left;
+      }
+      .health_hed2{
+        font-size: 120pt;
+        font-weight: 700;
+        color: $number_color_higest;
+        text-transform: uppercase;
+        margin-left: 50px;
+        display: inline;
+
+
+      }
+    }
+  }
+  .img_animate{
+    position: absolute;
+    z-index: 10;
+
+
+    &:nth-child(1){
+      margin-top: 45%;
+      margin-left: 50%;
+      animation-name: circle;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+    &:nth-child(2){
+      margin-top: 60%;
+      margin-left: 20%;
+      animation-name: latidos;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+    &:nth-child(3){
+      margin-top: 5%;
+      z-index: 1;
+      animation-name: floating;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+    &:nth-child(4){
+      animation-name: floating2;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      margin-left: 60%;
+    }
+    &:nth-child(5){
+      animation-name: circle2;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      margin-top: 10%;
+      margin-left: 30%;
+    }
+  }
+  .module{
+    &:nth-child(even){
+      margin-top: 300px;
+    }
+    margin: 2%;
+    width: 20%;
+    height: 50%;
+    float: left;
+    display: inline-block;
+
+    h2{
+      margin: 0;
+      padding: 0;
+      color: $number_color_higest;
+      font-size:100pt ;
+    }
+
+    h3{
+      margin: 0;
+      padding: 0;
+      color: $header_color_h3;
+      font-size: 24pt;
+      text-transform: uppercase;
+    }
+    p{
+      font-size: 14pt;
+      color: $text_color;
+    }
+  }
+}
+
+
+@media screen and (min-width: 1800px) {
+  .img_animate{
+    position: absolute;
+    z-index: 10;
+
+
+    &:nth-child(1){
+      margin-top: 25%;
+      margin-left: 50%;
+      animation-name: circle;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+    &:nth-child(2){
+      margin-top: 5%;
+      margin-left: 20%;
+      animation-name: latidos;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+    &:nth-child(3){
+      margin-top: 5%;
+      z-index: 1;
+      animation-name: floating;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+    &:nth-child(4){
+      animation-name: floating2;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      margin-left: 60%;
+    }
+    &:nth-child(5){
+      animation-name: circle2;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      margin-top: 10%;
+      margin-left: 30%;
+    }
+  }
+  .health_section{
+    height: 100%;
+  }
+}

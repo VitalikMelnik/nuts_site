@@ -1,0 +1,245 @@
+%html.no-js{:lang => "en"}
+
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+    %title= "Final"
+    %meta{:content => data.page.description || "SET YOUR SITE DESCRIPTION", :name => "description"}
+    %meta{:content => "width=device-width", :name => "viewport"}
+    %script{:src => "//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"}
+    %script{:src => "//css-tricks.com/examples/BlurredText/js/jquery.lettering.js"}
+    = javascript_include_tag "site"
+    = stylesheet_link_tag :main
+    = stylesheet_link_tag :navigation
+    = stylesheet_link_tag :header
+    = stylesheet_link_tag :section_health_benefits
+    = stylesheet_link_tag :tablet
+    = stylesheet_link_tag :laptop
+    = stylesheet_link_tag :slider_section
+    = stylesheet_link_tag :footer
+
+
+  %body
+
+    %section#nav.navigation
+      .colum_1
+        %ul.menulist
+          %li
+            %a{:href => "/index.html"}
+              about us
+          %li
+            %a{:href => "/index.html"}
+              how it works
+          %li
+            %a{:href => "#footer2"}
+              contact us
+          %li.hidden_navigation_button
+            %a{:href => "/index.html"}
+              buy walnuts
+      .colum_2
+        %img.logo_img{:src => "/images/logo.png"}
+        %p.logo_text Wally
+      .colum_3
+        %span.raight_navigation_button buy walnuts
+      #mobile_menu
+        %span
+        %span
+        %span
+
+    .header
+      .header_blue_fon
+        .header_content
+          .p.header_content_text Caring for you
+          %img.header_content_img{:src => "/images/logo.png"}
+          %img.header_content_img2{:src => "/images/nuts.png"}
+          %div.red_button_float_bottom whach video
+
+          %section#scroll_down_button
+            %a{:href => "#footer2"}
+              %span
+              %span
+
+        .triangle-bottomright
+
+    %section.about_text_section2
+      .main.about_text_section2_columns
+        %main.about_text_section2_main
+          %div.text_format
+            The health benefits of walnuts include reduction of bad cholesterol in the body,
+            improvement in metabolism, and control of diabetes.
+            Other important health benefits of walnuts stem from the fact that these nuts
+            possess anti-inflammatory properties, aid in weight management, and help as
+            a mood booster. They are also believed to slow down the spread of cancer
+        %aside.about_text_section2_sidebar-first
+        %aside.about_text_section2_sidebar-second
+
+    %div.section_about_vitamin_mineral
+      %div.section3_colum
+        %ul
+          %li.header_vitamins Vitamins
+          %li vitamin C
+          %li thiamin
+          %li riboflavin
+          %li vitamin K
+          %li vitamin B6
+          %li vitamin A
+          %li vitamin B12
+          %li vitamin E
+      %div.section3_colum
+        .center_header One large walnut contains
+      %div.section3_colum
+        %ul
+          %li.header_vitamins Minerals
+          %li Calcium
+          %li Iron
+          %li Magnesium
+          %li Phosphorous
+          %li Potassium
+          %li Sodium
+          %li Selemium
+          %li Zinc
+
+      .icon
+        %div.badge
+          %h1#h1 1 walnut - 30 g
+
+        %img.center_nuts_section2{:src => "/images/golovne.png"}
+
+        %ul.menu
+          %li.spread
+            %div.unit
+              %div.p1 3.9 g
+              %div.p2 of carbohydrate
+          %li.spread
+            %div.unit
+              %div.p1 0.74
+              %div.p2 of shugar
+          %li.spread
+            %div.unit
+              %div.p1 0.56
+              %div.p2 Omega-3 acid
+          %li.spread
+            %div.unit
+              %div.p1 4.32
+              %div.p2 of protein
+          %li.spread
+            %div.unit
+              %div.p1 1.9 g
+              %div.p2 of fiber
+          %li.spread
+            %div.unit
+              %div.p1 190
+              %div.p2 calories
+
+    %div.health_section
+      %img.img_animate{:src => "/images/1nutshover.png"}
+      %img.img_animate{:src => "/images/2nutshover.png"}
+      %img.img_animate{:src => "/images/3nutshover.png"}
+      %img.img_animate{:src => "/images/4nutshover.png"}
+      %img.img_animate{:src => "/images/5nutshover.png"}
+      %div.content
+        %div.head
+          .health_hed1 health
+          .health_hed2 benefits
+        .autowide
+          .module
+            %h2 1
+            %h3 weight loss
+            %p The almount of fat, calories and carbohydrate content found in walnuts is about 18 grams, resprctively per 1 ounce. Therefore, it is believed that walnut consumption may result in weigth gain.
+          .module
+            %h2 2
+            %h3 regular sleep
+            %p Want a good night’s sleep? Eat some walnuts soaked in water before sleeping, or eat a salad or any dish using walnuts as toppings. Melatonin, a hormone that helps induce and regulate sleep, is availablein them in a bio-available form. Thus, they help make for a perfect dinner that leads you to a great, restful sleep.
+          .module
+            %h2 3
+            %h3 skin care
+            %p Rich in gamma-tocopherol, walnuts are also a good source of vitamin E, which is a strong lipid-soluble antioxidant. The vitamin E present in them helps in maintaining and protecting the skin from free radicals that are harmful in nature.
+          .module
+            %h2 4
+            %h3 prevent cancer
+            %p Some of the components present in walnuts have the capability of controlling the growth of cancer cells in the body.
+
+    %div.header_section
+      %img.img_animate2{:src => "/images/6nutshover.png"}
+      %img.img_animate2{:src => "/images/9nutshover.png"}
+      %img.img_animate2{:src => "/images/8nutshover.png"}
+      %img.img_animate2{:src => "/images/7nutshover.png"}
+      %img.img_animate2{:src => "/images/10nutshover.png"}
+      %img.img_animate2{:src => "/images/11nutshover.png"}
+      .h3 Walnut
+      .h4 Lovers
+
+    .container
+      .testimonials-control
+        %div.fa-angle-left.fa.fa.fa-2x#testimonials-l
+      .testimonials-control
+        %div.fa.fa-angle-right.fa-2x#testimonials-r
+      .slider
+        %div.p23 ”
+        %ul#testimonials-ul
+          %li
+            %div.img_circle
+            %div.content2
+              .p21 Natali N
+              .p22 1
+          %li
+            %div.img_circle
+            %div.content2
+              .p21 Natali N
+              .p22 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+          %li
+            %div.img_circle
+            %div.content2
+              .p21 Natali N
+              .p22 3
+
+
+
+
+
+
+
+    %div.footer
+      %div.footer_header
+        .h33 buy
+        .h44 walnuts
+      %div.tablet
+        %table
+          %tr
+            %td A Walnut
+            %td Walnut+
+            %td Walnut group
+          %tr
+            %td
+              7$
+              %ul
+                %li  Duis aute irure dolor in reprehenderit
+                %li Excepteur sint occaecat cupidatat on
+                %li Sed ut perspiciatis unde omnis iste   natus
+            %td
+              12$
+              %ul
+                %li  Duis aute irure dolor in reprehenderit
+                %li Excepteur sint occaecat cupidatat on
+                %li Sed ut perspiciatis unde omnis iste   natus
+                %li Aperiam, eaque ipsa quae ab illo
+
+            %td
+              24$
+              %ul
+                %li  Duis aute irure dolor in reprehenderit
+                %li Excepteur sint occaecat cupidatat on
+                %li Sed ut perspiciatis unde omnis iste   natus
+                %li Aperiam, eaque ipsa quae ab illo
+                %li Beatae vitae dicta sunt explicabo.
+
+
+
+          %tr
+            %td
+              %div.footer_button Buy
+            %td
+              %div.footer_button Buy
+            %td
+              %div.footer_button Buy
+

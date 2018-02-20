@@ -1,0 +1,23 @@
+$site_background: #fff;
+
+
+@font-face {
+  font-family: 'Museo Sans Cyrl 300';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Museo Sans Cyrl 300'), url('../font/MuseoSansCyrl_0.woff') format('woff');
+}
+body{
+  margin: 0;
+  padding: 0;
+  background-color: $site_background;
+  height: 100%;
+  font-family: 'Museo Sans Cyrl 300';
+  font-weight: normal;
+}
+
+
+.footer{
+  height: 2000px;
+  width: 100%;
+}
