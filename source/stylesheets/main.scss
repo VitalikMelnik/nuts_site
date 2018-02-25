@@ -1,18 +1,39 @@
 $site_background: #fff;
 
-
+@font-face {
+  font-family: 'Museo Sans Cyrl 500';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Museo Sans Cyrl 500'), url('../font/museo-sans-cyrl-500/MuseoSansCyrl_1.woff') format('woff');
+}
 @font-face {
   font-family: 'Museo Sans Cyrl 300';
   font-style: normal;
   font-weight: normal;
-  src: local('Museo Sans Cyrl 300'), url('../font/MuseoSansCyrl_0.woff') format('woff');
+  src: local('Museo Sans Cyrl 300'), url('../font/museo-sans-cyrl-300/MuseoSansCyrl_0.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Museo Sans Cyrl 100';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Museo Sans Cyrl 100'), url('../font/MuseoSansCyrl-100/MuseoSansCyrl-100.woff') format('woff');
+
+}
+
+@font-face {
+  font-family: 'Museo Sans Cyrl 700';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Museo Sans Cyrl 700'), url('../font/myseo-sans-cyrl-700/MuseoSansCyrl_2.woff') format('woff');
+
 }
 body{
   margin: 0;
   padding: 0;
   background-color: $site_background;
   height: 100%;
-  font-family: 'Museo Sans Cyrl 300';
+
   font-weight: normal;
 }
 

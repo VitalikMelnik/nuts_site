@@ -18,7 +18,190 @@
   50% { transform: scale(1.2); }
   to { transform: none; }
 }
-@media screen and (min-width: 1024px) {
+
+@media screen and (max-width: 1323px) {
+  .img_animate2 {
+    position: absolute;
+    z-index: 10;
+    &:nth-child(1) {
+
+      margin-top: 50px;
+      margin-left: 100px;
+      animation-name: fast;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+    &:nth-child(2) {
+      margin-left: -10%;
+      margin-top: 900px;
+      animation-name: floating;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+    &:nth-child(3) {
+      display: none;
+
+    }
+    &:nth-child(4) {
+
+      margin-top: 150px;
+      margin-left: 0px;
+      animation-name: fast2;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+
+    }
+    &:nth-child(5) {
+
+      display: none;
+    }
+    &:nth-child(6) {
+      margin-top: 1100px;
+      display: none;
+      animation-name: latidos;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+  }
+  .header_section {
+    margin-top: 110px;
+    width: 80%;
+
+    display: inline-block;
+    margin-left: 10%;
+
+    .h3 {
+      font-family: "Museo Sans Cyrl 700";
+      text-transform: uppercase;
+      font-size: 45pt;
+      display: block;
+      color: #fceace;
+      width: 100%;
+      text-align: center;
+    }
+    .h4 {
+      display: block;
+      margin: 0 auto;
+      text-transform: uppercase;
+      width: 100%;
+      font-size: 45pt;
+      font-family: "Museo Sans Cyrl 100";
+      color: #fceace;
+      text-align: center;
+    }
+  }
+  .slider_container {
+    position: relative;
+    width: 88%;
+    height: auto;
+    z-index: 15;
+    margin-top: 70px;
+    margin-left: 6%;
+    .testimonials-control {
+
+      height: 100px;
+      display: block;
+      margin-left: 20%;
+      margin-top: -30px;
+      position: absolute;
+
+      &:nth-child(2) {
+        margin-left: 75%;
+
+      }
+    }
+
+    .testimonials-control div {
+      position: absolute;
+      z-index: 10;
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+      border-bottom: 3px solid #7a6968;
+      border-left: 3px solid #7a6968;
+      transform: rotate(45deg);
+
+    }
+    #testimonials-r {
+      transform: rotate(-135deg);
+    }
+
+    .img_circle {
+      width: 140px;
+      height: 140px;
+      border-radius: 100%;
+
+      background: url("../images/people_img.png") center no-repeat;
+      background-size: cover;
+      position: absolute;
+      margin-left: 20px;
+      margin-top: 60px;
+    }
+    .text_slider_content {
+      width: 85%;
+      min-height: auto;
+      border-radius: 15%;
+      background-color: #eff1f5;
+      .p_name_slider {
+        font-family: "Museo Sans Cyrl 500";
+        text-align: center;
+        font-size: 24pt;
+        color: #395084;
+        margin-top: 105px;
+        display: inline-block;
+        width: 30%;
+        margin-left: 60%;
+      }
+      .p_text_slider {
+        font-family: "Museo Sans Cyrl 100";
+        color: #395084;
+        text-align: center;
+        margin-top: 100px;
+        font-size: 18pt;
+        line-height: 40pt;
+        width: 90%;
+        margin-left: 5%;
+        padding: 5px;
+        overflow: visible;
+        display: inline-block;
+      }
+    }
+
+    .slider {
+      //background-color: #e8e8e5;
+      overflow: hidden;
+      min-width: 300px;
+      margin: 0 auto;
+      min-height: 500px;
+      height: auto;
+      z-index: 7;
+      .p_big_comma {
+        display: none;
+      }
+    }
+    .slider ul {
+
+      list-style: none;
+      position: relative;
+      display: flex;
+
+      overflow: hidden;
+      padding: 0;
+    }
+    .slider ul li {
+      display: block;
+
+      width: 100%;
+    }
+
+  }
+}
+
+@media screen and (min-width: 1324px) {
 
   .img_animate2{
     position: absolute;
@@ -33,7 +216,7 @@
     }
     &:nth-child(2){
       margin-left: -10%;
-      margin-top: 55%;
+      margin-top: 75%;
       animation-name: floating;
       animation-duration: 3s;
       animation-iteration-count: infinite;
@@ -62,7 +245,7 @@
     }
     &:nth-child(5){
 
-      margin-top: 50%;
+      margin-top: 1200px;
       margin-left: 55%;
       animation-name: latidos;
       animation-duration: 2s;
@@ -70,7 +253,7 @@
       animation-timing-function: linear;
     }
     &:nth-child(6){
-      margin-top: 150%;
+      margin-top: 1550px;
 
       animation-name: latidos;
       animation-duration: 3s;
@@ -79,16 +262,17 @@
     }
   }
   .header_section{
-
+    margin-top: 110px;
     width: 80%;
+
     display: inline-block;
     margin-left: 10%;
 
     .h3{
-
+      font-family: "Museo Sans Cyrl 700";
       text-transform: uppercase;
       font-size: 120pt;
-      font-weight: 700;
+
       color: #fceace;
       float: left;
     }
@@ -97,131 +281,139 @@
       text-transform: uppercase;
       margin-left: 50px;
       font-size: 120pt;
-      font-weight: 100;
+      font-family: "Museo Sans Cyrl 100";
       color: #fceace;
       float: left;
     }
   }
 
-
-
-
-  .img_circle{
-    width: 200px;
-    height: 200px;
-
-    border-radius: 100%;
-    margin-left: 400px;
-    background:  url("../images/people_img.png") center no-repeat;
-    background-size: cover;
-    position: absolute;
-
-  }
-  .content2{
-
-    max-width:750px;
-    min-height: 750px;
-    border-radius: 100%;
-    background-color: #eff1f5;
-    margin-top: 100px;
-    margin-left: 125px;
-    .p21{
-
-      text-align: center;
-      font-size: 24pt;
-      color: #395084;
-      margin-top: 175px;
-      display: inline-block;
-      width: 20%;
-      margin-left: 40%;
-    }
-    .p22{
-
-      color: #395084;
-      text-align: center;
-      margin-top: 40px;
-      font-size: 18pt;
-      line-height: 40pt;
-      width: 130%;
-      margin-left: -15%;
-      overflow: visible;
-      display: inline-block;
-    }
-  }
-  .container {
+  .slider_container {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 1000px;
     z-index: 15;
-
-  }
-  .slider{
-    //background-color: #e8e8e5;
-
-    overflow: hidden;
-    max-width: 1000px;
-    margin: 0 auto;
-    height:auto;
-    z-index: 7;
-    .p23{
-      font-size: 767pt;
+    margin-top: 70px;
+    .testimonials-control {
+      width: 10%;
+      height: 10%;
+      display: block;
+      margin-left: 10%;
+      margin-top: 500px;
       position: absolute;
-      color: #eff1f5;
-      margin-top: -100px;
-      margin-left: -150px;
+      &:nth-child(2) {
+        margin-left: 90%;
+      }
     }
-  }
-  .slider ul {
-    list-style: none;
-    position: relative;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    padding: 0;
-  }
-  .slider ul li {
-    display: block;
 
-    width:100%;
-  }
+    .testimonials-control div {
+      position: absolute;
+      z-index: 10;
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+      border-bottom: 3px solid #7a6968;
+      border-left: 3px solid #7a6968;
+      transform: rotate(45deg);
 
-
-  .testimonials-control {
-    width: 10%;
-    height: 10%;
-    display: block;
-    margin-left: 10%;
-    margin-top: 10%;
-    position: absolute;
-    &:nth-child(2){
-      margin-left: 80%;
     }
-  }
+    #testimonials-r {
+      transform: rotate(-135deg);
+    }
 
-  .testimonials-control div {
-    position: absolute;
-    z-index: 10;
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
-    border-bottom: 4px solid #000000 ;
-    border-left:4px solid #000000 ;
-    transform: rotate(45deg);
+    .img_circle {
+      width: 200px;
+      height: 200px;
+      border-radius: 100%;
+      margin-left: 400px;
+      background: url("../images/people_img.png") center no-repeat;
+      background-size: cover;
+      position: absolute;
+
+    }
+    .text_slider_content {
+
+      max-width: 750px;
+      min-height: 750px;
+      border-radius: 100%;
+      background-color: #eff1f5;
+      margin-top: 100px;
+      margin-left: 125px;
+      .p_name_slider {
+        font-family: "Museo Sans Cyrl 500";
+        text-align: center;
+        font-size: 24pt;
+        color: #395084;
+        margin-top: 175px;
+        display: inline-block;
+        width: 20%;
+        margin-left: 40%;
+      }
+      .p_text_slider {
+        font-family: "Museo Sans Cyrl 100";
+        color: #395084;
+        text-align: center;
+        margin-top: 40px;
+        font-size: 18pt;
+        line-height: 40pt;
+        width: 130%;
+        margin-left: -15%;
+        overflow: visible;
+        display: inline-block;
+      }
+    }
+
+    .slider {
+      //background-color: #e8e8e5;
+
+      overflow: hidden;
+      max-width: 1000px;
+      margin: 0 auto;
+      height: auto;
+      z-index: 7;
+      .p_big_comma {
+        font-size: 767pt;
+        position: absolute;
+        color: #eff1f5;
+        margin-top: -100px;
+        margin-left: -100px;
+        font-family: "Museo Sans Cyrl 100";
+      }
+    }
+    .slider ul {
+      list-style: none;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding: 0;
+    }
+    .slider ul li {
+      display: block;
+
+      width: 100%;
+    }
+
 
   }
-  #testimonials-r{
-    transform: rotate(-135deg);
-  }
-
 }
+
 @media screen and (min-width: 1800px) {
   .img_animate2{
+    &:nth-child(1) {
+      margin-top: 100px;
+    }
     &:nth-child(2){
-      margin-top: 40%;
+      margin-top: 800px;
+    }
+    &:nth-child(3) {
+      margin-top: 500px;
+    }
+    &:nth-child(4) {
+      margin-top: 300px;
     }
     &:nth-child(5){
       z-index: 17;
-      margin-top: 50%;
+      margin-top: 1000px;
       margin-left: 50%;
       animation-name: circle;
       animation-duration: 2s;
@@ -229,18 +421,21 @@
       animation-timing-function: linear;
     }
     &:nth-child(6){
-      margin-top: 70%;
+      margin-top: 1500px;
+      margin-left: -5%;
     }
   }
-  .testimonials-control {
-    width: 10%;
-    height: 10%;
-    display: block;
-    margin-left: 20%;
-    margin-top: 20%;
-    position: absolute;
-    &:nth-child(2){
-      margin-left: 75%;
+  .slider_container {
+    .testimonials-control {
+      width: 10%;
+      height: 10%;
+      display: block;
+      margin-left: 20%;
+
+      position: absolute;
+      &:nth-child(2) {
+        margin-left: 80%;
+      }
     }
   }
 }

@@ -11,10 +11,10 @@
     = javascript_include_tag "site"
     = stylesheet_link_tag :main
     = stylesheet_link_tag :navigation
-    = stylesheet_link_tag :header
     = stylesheet_link_tag :section_health_benefits
+    = stylesheet_link_tag :walmut_content_sec2
     = stylesheet_link_tag :tablet
-    = stylesheet_link_tag :laptop
+    = stylesheet_link_tag :header
     = stylesheet_link_tag :slider_section
     = stylesheet_link_tag :footer
 
@@ -22,24 +22,24 @@
   %body
 
     %section#nav.navigation
-      .colum_1
+      .navigation_colum_1
         %ul.menulist
           %li
-            %a{:href => "/index.html"}
+            %a{:href => "#about_section"}
               about us
           %li
-            %a{:href => "/index.html"}
+            %a{:href => "#how_work"}
               how it works
           %li
-            %a{:href => "#footer2"}
+            %a{:href => "#contact"}
               contact us
           %li.hidden_navigation_button
-            %a{:href => "/index.html"}
+            %a{:href => "#buy_nuts"}
               buy walnuts
-      .colum_2
+      .navigation_colum_2
         %img.logo_img{:src => "/images/logo.png"}
         %p.logo_text Wally
-      .colum_3
+      .navigation_colum_3
         %span.raight_navigation_button buy walnuts
       #mobile_menu
         %span
@@ -53,15 +53,14 @@
           %img.header_content_img{:src => "/images/logo.png"}
           %img.header_content_img2{:src => "/images/nuts.png"}
           %div.red_button_float_bottom whach video
-
           %section#scroll_down_button
-            %a{:href => "#footer2"}
+            %a{:href => "#about_section"}
               %span
               %span
 
         .triangle-bottomright
 
-    %section.about_text_section2
+    %section.about_text_section2#about_section
       .main.about_text_section2_columns
         %main.about_text_section2_main
           %div.text_format
@@ -73,7 +72,7 @@
         %aside.about_text_section2_sidebar-first
         %aside.about_text_section2_sidebar-second
 
-    %div.section_about_vitamin_mineral
+    %section.section_about_vitamin_mineral#how_work
       %div.section3_colum
         %ul
           %li.header_vitamins Vitamins
@@ -99,7 +98,7 @@
           %li Selemium
           %li Zinc
 
-      .icon
+      .circle_section2
         %div.badge
           %h1#h1 1 walnut - 30 g
 
@@ -159,7 +158,7 @@
             %h3 prevent cancer
             %p Some of the components present in walnuts have the capability of controlling the growth of cancer cells in the body.
 
-    %div.header_section
+    %div.header_section#contact
       %img.img_animate2{:src => "/images/6nutshover.png"}
       %img.img_animate2{:src => "/images/9nutshover.png"}
       %img.img_animate2{:src => "/images/8nutshover.png"}
@@ -169,55 +168,112 @@
       .h3 Walnut
       .h4 Lovers
 
-    .container
+    .slider_container
       .testimonials-control
         %div.fa-angle-left.fa.fa.fa-2x#testimonials-l
       .testimonials-control
         %div.fa.fa-angle-right.fa-2x#testimonials-r
       .slider
-        %div.p23 ”
+        %div.p_big_comma ”
         %ul#testimonials-ul
           %li
             %div.img_circle
-            %div.content2
-              .p21 Natali N
-              .p22 1
+            %div.text_slider_content
+              .p_name_slider Natali N
+              .p_text_slider Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
           %li
             %div.img_circle
-            %div.content2
-              .p21 Natali N
-              .p22 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+            %div.text_slider_content
+              .p_name_slider Natali 2N
+              .p_text_slider 2
           %li
             %div.img_circle
-            %div.content2
-              .p21 Natali N
-              .p22 3
+            %div.text_slider_content
+              .p_name_slider Natali N
+              .p_text_slider 3
 
+    %div.footer#buy_nuts
+      %div.footer_treangl
 
-
-
-
-
-
-    %div.footer
       %div.footer_header
         .h33 buy
         .h44 walnuts
+        %div.table_first_header
+          .h55 Choose your walnut buying plan
+          .underline_head_text
       %div.tablet
-        %table
+        %table.mobile_table
+          %tr
+            %td A Walnut
+          %tr
+            %td
+              .p1 7
+              .p2 $
+          %tr
+            %td
+              %ul
+                %li Duis aute irure dolor in reprehenderit
+                %li Excepteur sint occaecat cupidatat on
+                %li Sed ut perspiciatis unde omnis iste   natus
+          %tr
+            %td
+              %div.footer_button Buy
+          %tr
+            %td Walnut+
+          %tr
+            %td
+              .p1 12
+              .p2 $
+          %tr
+            %td
+              %ul
+                %li Duis aute irure dolor in reprehenderit
+                %li Excepteur sint occaecat cupidatat on
+                %li Sed ut perspiciatis unde omnis iste   natus
+                %li Aperiam, eaque ipsa quae ab illo
+          %tr
+            %td
+              %div.footer_button Buy
+          %tr
+            %td Walnut group
+          %tr
+            %td
+              .p1 24
+              .p2 $
+          %tr
+            %td
+              %ul
+                %li Duis aute irure dolor in reprehenderit
+                %li Excepteur sint occaecat cupidatat on
+                %li Sed ut perspiciatis unde omnis iste   natus
+                %li Aperiam, eaque ipsa quae ab illo
+                %li Beatae vitae dicta sunt explicabo.
+          %tr
+            %td
+              %div.footer_button Buy
+
+        %table.pc_table
           %tr
             %td A Walnut
             %td Walnut+
             %td Walnut group
           %tr
             %td
-              7$
+              .p1 7
+              .p2 $
+            %td
+              .p1 12
+              .p2 $
+            %td
+              .p1 24
+              .p2 $
+          %tr
+            %td
               %ul
                 %li  Duis aute irure dolor in reprehenderit
                 %li Excepteur sint occaecat cupidatat on
                 %li Sed ut perspiciatis unde omnis iste   natus
             %td
-              12$
               %ul
                 %li  Duis aute irure dolor in reprehenderit
                 %li Excepteur sint occaecat cupidatat on
@@ -225,7 +281,6 @@
                 %li Aperiam, eaque ipsa quae ab illo
 
             %td
-              24$
               %ul
                 %li  Duis aute irure dolor in reprehenderit
                 %li Excepteur sint occaecat cupidatat on

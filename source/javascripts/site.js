@@ -17,7 +17,7 @@ $(document).ready(function () {
 // Button functionality
 
     var tPosition = 0;
-    console.log(tPosition);
+    //console.log(tPosition);
 
     tRightButton.click(function() {
         if (tPosition < (tItemCount - 1)) {
@@ -72,14 +72,25 @@ $(document).ready(function () {
     var $header = $('#nav');
     var $hHeight = $header.height();
     var prevTop = $(window).scrollTop();
+
+
     $(window).on('scroll', function (e) {
+        if (prevTop >= 500) {
+            $("#nav").addClass("scroll-color");
+            $("#nav").removeClass("navigation");
+        } else {
+            $("#nav").removeClass("scroll-color");
+            $("#nav").addClass("navigation");
+        }
         $('#mobile_menu').removeClass('open');
         $header.removeClass('open');
         st = $(this).scrollTop();
         if (st > prevTop && st > $hHeight) {
             $header.addClass('js-global-header-scrolling');
+            $header.removeClass('js-global-header-scrolling-show');
         } else {
             $header.removeClass('js-global-header-scrolling');
+            $header.addClass('js-global-header-scrolling-show');
 
         }
         prevTop = st;

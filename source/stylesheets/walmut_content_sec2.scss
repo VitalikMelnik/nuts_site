@@ -1,0 +1,636 @@
+$header_background_color: #c6d6f2;
+$site_background: #fff;
+$text_color: #395084;
+
+@media screen and (max-width: 1023px) {
+  $text_color_section2: #395084;
+  $li: 6;
+  $icon-size: 300px;
+  $menu-size: 300px / 2;
+  $unit-size: 100px;
+  $menu-position: (($menu-size * 2) - $icon-size) / -2;
+  $offset: 150px;
+  $deg: 360deg / $li;
+  .section_about_vitamin_mineral {
+    transform: translate3d(0, 0, 0);
+    width: 100%;
+    background: url("../images/section2.png") center no-repeat;
+    background-size: cover;
+    display: inline-block;
+    .section3_colum:nth-child(2) {
+      height: 600px;
+    }
+    .section3_colum {
+      display: block;
+      height: auto;
+      width: 100%;
+      flex-flow: row wrap;
+      justify-content: center;
+      padding-bottom: 50px;
+      .center_header {
+        color: $text_color_section2;
+        font-size: 15pt;
+        text-transform: uppercase;
+        font-weight: 900;
+        text-align: center;
+        font-family: "Museo Sans Cyrl 300";
+        position: absolute;
+        width: 80%;
+        margin-left: 10%;
+      }
+      .header_vitamins {
+        font-size: 36pt;
+        font-family: "Museo Sans Cyrl 300";
+
+      }
+
+      li:nth-child(1) {
+        padding-bottom: 50px;
+
+      }
+      ul {
+        padding: 0;
+      }
+      li {
+        font-size: 16pt;
+        font-family: "Museo Sans Cyrl 300";
+        color: $text_color_section2;
+        text-align: center;
+        padding: 18px;
+        list-style: none;
+        -webkit-transition: all 0.3s ease;;
+        -moz-transition: all 0.3s ease;;
+        -o-transition: all 0.3s ease;;
+        transition: all 0.3s ease;
+        &:hover {
+          -webkit-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+          transform: scale(1.2);
+        }
+
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .circle_section2 {
+    opacity: 0.8;
+    &:hover {
+      opacity: 1.0;
+    }
+    position: absolute;
+    background: url("../images/circle_section_2.png") no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+    color: $text_color_section2;
+    border-radius: 50%;
+    height: $icon-size;
+    width: $icon-size;
+    line-height: $icon-size;
+    text-align: center;
+    font-size: 2.75em;
+    font-weight: bold;
+    transition: 0.24s 0.2s;
+
+    .badge {
+      display: none;
+
+    }
+    li {
+      list-style: none;
+    }
+    .center_nuts_section2 {
+      height: 50%;
+      width: 50%;
+      position: absolute;
+      margin-top: 80px;
+      margin-left: -60px;
+    }
+  }
+
+  .menu {
+    position: absolute;
+    top: $menu-position;
+    left: $menu-position;
+    border: $menu-size solid transparent;
+    cursor: default;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+    transform: scale(0);
+    transition: transform 1.4s 0.07s;
+    z-index: -5;
+  }
+
+  .spread {
+    position: absolute;
+    top: -($offset);
+    left: -($offset);
+    transform-origin: $offset $offset;
+    transition: all 0.5s 0.1s;
+  }
+
+  .circle_section2:hover {
+    .menu {
+      transition: transform 0.4s 0.08s,
+      z-index 0s 0.5s;
+      transform: scale(1);
+      z-index: 5;
+    }
+    .spread, .unit {
+      transition: all 1.6s;
+    }
+
+    @for $m from 1 through $li {
+      .spread:nth-child(#{$m}) {
+        transition-delay: $m * 0.2s;
+        transform: rotate(45 + $deg * $m);
+        .unit {
+          transition-delay: $m * 0.4s;
+          transform: rotate(-$deg * $m + 720 - 45);
+        }
+      }
+    }
+  }
+
+  .unit {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    width: $unit-size;
+    height: $unit-size;
+    line-height: 25px;
+    color: $text_color_section2;
+    border-radius: 50%;
+    transition: 0.6s;
+    .p1 {
+      font-size: 16pt;
+      font-family: "Museo Sans Cyrl 500";
+      margin-top: 15px;
+      -webkit-transition: all 0.3s ease;;
+      -moz-transition: all 0.3s ease;;
+      -o-transition: all 0.3s ease;;
+      transition: all 0.3s ease;
+      &:hover {
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+      }
+    }
+    .p2 {
+      font-family: "Museo Sans Cyrl 500";
+      font-size: 8pt;
+      margin-top: 20px;
+      -webkit-transition: all 0.3s ease;;
+      -moz-transition: all 0.3s ease;;
+      -o-transition: all 0.3s ease;;
+      transition: all 0.3s ease;
+      &:hover {
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+      }
+    }
+
+  }
+}
+
+@media screen and (min-width: 600px) {
+  $text_color_section2: #395084;
+  $li: 6;
+  $icon-size: 500px;
+  $menu-size: 300px / 2;
+  $unit-size: 150px;
+  $menu-position: (($menu-size * 2) - $icon-size) / -2;
+  $offset: 230px;
+  $deg: 360deg / $li;
+  .about_text_section2 {
+    width: 100%;
+    height: 500px;
+  }
+  .circle_section2 {
+    margin-left: -250px;
+    margin-top: -250px;
+    height: $icon-size;
+    width: $icon-size;
+
+    .badge {
+      margin-left: -85px;
+      margin-top: 80px;
+    }
+    .center_nuts_section2 {
+      margin-top: 140px;
+      margin-left: -100px;
+    }
+  }
+  .unit {
+    width: $unit-size;
+    height: $unit-size;
+    .p1 {
+      font-size: 24pt;
+      margin-top: 35px;
+    }
+    .p2 {
+      font-size: 12pt;
+      margin-top: 20px;
+    }
+
+  }
+  .menu {
+    top: $menu-position;
+    left: $menu-position;
+    border: $menu-size solid transparent;
+  }
+  .spread {
+
+    top: -($offset);
+    left: -($offset);
+    transform-origin: $offset $offset;
+
+  }
+  .section_about_vitamin_mineral {
+    //position: absolute;
+
+    .section3_colum:nth-child(2) {
+      height: 800px;
+
+    }
+
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+  $text_color_section2: #395084;
+  $li: 6;
+  $icon-size: 750px;
+  $menu-size: 300px / 2;
+  $unit-size: 220px;
+  $menu-position: (($menu-size * 2) - $icon-size) / -2;
+  $offset: 385px;
+  $deg: 360deg / $li;
+
+  .section_about_vitamin_mineral {
+    //position: absolute;
+
+    margin-top: -180px;
+    transform: translate3d(0, 0, 0);
+    width: 100%;
+    min-height: 1500px;
+    background: url("../images/section2.png") center no-repeat;
+    background-size: cover;
+    display: inline-block;
+
+    .section3_colum:nth-child(2) {
+      height: 1000px;
+    }
+    .section3_colum {
+      display: block;
+      height: 1000px;
+      width: 100%;
+      flex-flow: row wrap;
+      justify-content: center;
+      .center_header {
+        color: $text_color_section2;
+        font-size: 48pt;
+        font-family: "Museo Sans Cyrl 300";
+        position: absolute;
+        width: 80%;
+        margin-left: 10%;
+        text-align: center;
+        margin-top: -150px;
+
+      }
+      .header_vitamins {
+        font-size: 36pt;
+        font-family: "Museo Sans Cyrl 300";
+
+      }
+      li:nth-child(1) {
+        padding-bottom: 50px;
+
+      }
+      li {
+        font-size: 16px;
+        font-family: "Museo Sans Cyrl 300";
+        color: $text_color_section2;
+        text-align: center;
+        padding: 18px;
+        list-style: none;
+        -webkit-transition: all 0.3s ease;;
+        -moz-transition: all 0.3s ease;;
+        -o-transition: all 0.3s ease;;
+        transition: all 0.3s ease;
+        &:hover {
+          -webkit-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+          transform: scale(1.2);
+        }
+
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .circle_section2 {
+    opacity: 0.8;
+    &:hover {
+      opacity: 1.0;
+    }
+    position: absolute;
+    background: url("../images/circle_section_2.png") no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    margin-left: -375px;
+    margin-top: -375px;
+    color: $text_color_section2;
+    border-radius: 50%;
+    height: $icon-size;
+    width: $icon-size;
+    line-height: $icon-size;
+    text-align: center;
+    font-size: 2.75em;
+    font-weight: bold;
+    transition: 0.24s 0.2s;
+
+    .badge {
+      margin-left: -120px;
+      margin-top: 490px;
+      position: relative;
+      width: 400px;
+      border-radius: 30%;
+      transform: rotate(-70deg);
+    }
+
+    h1 span {
+      font: 18pt 'Museo Sans Cyrl 300', MonoSpace;
+      height: 447px;
+      position: absolute;
+      width: 395px;
+      margin: 0;
+
+    }
+
+    .char1 {
+      transform: rotate(4deg);
+      font-weight: bolder;
+      font-size: 25pt;
+      margin-top: -8px;
+
+    }
+
+    .char2 {
+      transform: rotate(8deg);
+    }
+
+    .char3 {
+      transform: rotate(12deg);
+    }
+
+    .char4 {
+      transform: rotate(16deg);
+    }
+
+    .char5 {
+      transform: rotate(20deg);
+    }
+
+    .char6 {
+      transform: rotate(24deg);
+    }
+
+    .char7 {
+      transform: rotate(28deg);
+    }
+
+    .char8 {
+      transform: rotate(32deg);
+    }
+
+    .char9 {
+      transform: rotate(36deg);
+    }
+
+    .char10 {
+      transform: rotate(40deg);
+    }
+
+    .char11 {
+      transform: rotate(44deg);
+    }
+
+    .char12 {
+      margin-top: -8px;
+      transform: rotate(48deg);
+      font-weight: bold;
+      font-size: 25pt;
+
+    }
+
+    .char13 {
+      font-size: 25pt;
+      margin-top: -1px;
+      margin-left: 5px;
+      transform: rotate(52deg);
+      font-weight: bold;
+
+    }
+
+    .char14 {
+      transform: rotate(56deg);
+    }
+
+    .char15 {
+      transform: rotate(60deg);
+    }
+
+    li {
+      list-style: none;
+    }
+    .center_nuts_section2 {
+      height: 395px;
+      width: 480px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -200px;
+      margin-top: -190px;
+    }
+  }
+
+  .menu {
+    position: absolute;
+    top: $menu-position;
+    left: $menu-position;
+    border: $menu-size solid transparent;
+    cursor: default;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+    transform: scale(0);
+    transition: transform 1.4s 0.07s;
+    z-index: -5;
+  }
+
+  .spread {
+    position: absolute;
+    top: -($offset);
+    left: -($offset);
+    transform-origin: $offset $offset;
+    transition: all 0.5s 0.1s;
+  }
+
+  .circle_section2:hover {
+    .menu {
+      transition: transform 0.4s 0.08s,
+      z-index 0s 0.5s;
+      transform: scale(1);
+      z-index: 5;
+    }
+    .spread, .unit {
+      transition: all 1.6s;
+    }
+
+    @for $m from 1 through $li {
+      .spread:nth-child(#{$m}) {
+        transition-delay: $m * 0.2s;
+        transform: rotate(45 + $deg * $m);
+        .unit {
+          transition-delay: $m * 0.4s;
+          transform: rotate(-$deg * $m + 720 - 45);
+        }
+      }
+    }
+  }
+
+  .unit {
+
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    width: $unit-size;
+    height: $unit-size;
+    line-height: 25px;
+    color: $text_color_section2;
+    border-radius: 50%;
+    transition: 0.6s;
+    .p1 {
+      font-size: 36pt;
+      font-family: "Museo Sans Cyrl 500";
+      margin-top: 77px;
+      -webkit-transition: all 0.3s ease;;
+      -moz-transition: all 0.3s ease;;
+      -o-transition: all 0.3s ease;;
+      transition: all 0.3s ease;
+      &:hover {
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+      }
+    }
+    .p2 {
+      font-family: "Museo Sans Cyrl 500";
+      font-size: 18pt;
+      margin-top: 40px;
+      -webkit-transition: all 0.3s ease;;
+      -moz-transition: all 0.3s ease;;
+      -o-transition: all 0.3s ease;;
+      transition: all 0.3s ease;
+      &:hover {
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+      }
+    }
+
+  }
+}
+
+@media screen and (min-width: 1424px) {
+  .section3_colum:nth-child(2) {
+    height: 100%;
+  }
+  .section_about_vitamin_mineral {
+    margin-top: -300px;
+    transform: translate3d(0, 0, 0);
+    width: 100%;
+    min-height: 100%;
+
+    background: url("../images/section2.png") center no-repeat;
+    background-size: cover;
+    display: inline-block;
+    .center_header {
+
+      font-size: 48pt;
+      font-family: "Museo Sans Cyrl 300";
+      position: absolute;
+      margin-top: 70px !important;
+      margin-left: 0 !important;
+
+    }
+    .section3_colum {
+      float: left;
+      display: flex;
+      height: 1321px;
+      width: 33.33%;
+      flex-flow: row wrap;
+      justify-content: center;
+
+      ul {
+        margin: auto;
+        width: 30%;
+        float: right;
+      }
+
+      .header_vitamins {
+        font-size: 36pt;
+      }
+      li:nth-child(1) {
+        padding-bottom: 50px;
+        margin-left: -30px;
+      }
+      li {
+        font-size: 16px;
+        padding: 18px;
+        padding-left: 30px;
+        list-style: none;
+        text-align: left;
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

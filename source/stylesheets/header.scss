@@ -1,0 +1,446 @@
+$header_background_color: #c6d6f2;
+$site_background: #fff;
+$text_color: #395084;
+$heigth_img_header: 960px;
+
+@media screen and (max-width: 1023px) {
+  .header_content_img2 {
+    display: none;
+  }
+  .header {
+    width: 100%;
+    height: $heigth_img_header;
+  }
+  .header_blue_fon {
+    width: 100%;
+    max-height: $heigth_img_header;
+    background-image: url("../images/header_image.png");
+    background-repeat: no-repeat;
+    background-size: inherit;
+    background-attachment: fixed;
+  }
+  .triangle-bottomright {
+    z-index: 0;
+    position: absolute;
+    margin-top: 190px;
+    width: 100%;
+    max-height: 772px;
+    background-color: $site_background;
+    -webkit-clip-path: polygon(100% 2%, 100% 1%, 100% 100%, 0 100%);
+    clip-path: polygon(100% 2%, 100% 1%, 100% 100%, 0 100%);
+  }
+  .header_content {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    .header_content_text {
+      color: white;
+      font-size: 60pt;
+      font-family: "Museo Sans Cyrl 500";
+      text-align: center;
+      margin-top: 20%;
+      padding-bottom: 30px;
+      -webkit-transition: all 0.3s ease;;
+      -moz-transition: all 0.3s ease;;
+      -o-transition: all 0.3s ease;;
+      transition: all 0.3s ease;
+      &:hover {
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+      }
+    }
+    .header_content_img {
+      position: absolute;
+      height: 80px;
+      width: 70px;
+      left: 50%;
+      margin-left: -35px;
+      -webkit-transition: all 0.3s ease;;
+      -moz-transition: all 0.3s ease;;
+      -o-transition: all 0.3s ease;;
+      transition: all 0.3s ease;
+      &:hover {
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+      }
+
+    }
+    .red_button_float_bottom {
+      width: 300px;
+      border: 3px transparent solid;
+      border-radius: 40px;
+      background-color: #ff9676;
+      text-align: center;
+      color: white;
+      position: absolute;
+      left: 50%;
+      margin-top: 200px;
+      margin-left: -150px;
+      transition: all .3s ease 0s;
+      font-size: 28pt;
+      font-family: "Museo Sans Cyrl 500";
+      padding-top: 20px;
+      padding-bottom: 20px;
+      &:hover {
+        border: 3px solid #333;
+        background-color: white;
+        color: #333;
+      }
+    }
+    #scroll_down_button a {
+      margin-top: 340px;
+      height: 40px;
+      width: 40px;
+      left: 50%;
+      margin-left: -20px;
+      position: absolute;
+
+    }
+    #scroll_down_button a span {
+      position: absolute;
+      z-index: 15;
+      top: 0;
+      left: 50%;
+      width: 34px;
+      height: 50px;
+      margin-left: -17px;
+      border: 2px solid #d3b28d;
+      border-radius: 50px;
+      box-sizing: border-box;
+    }
+    #scroll_down_button a span:nth-child(2)::after {
+      position: absolute;
+      bottom: -25px;
+      left: 50%;
+      width: 10px;
+      height: 10px;
+      content: '';
+      margin-left: -5px;
+      border-left: 1px solid #d3b28d;
+      border-bottom: 1px solid #d3b28d;
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      box-sizing: border-box;
+    }
+    #scroll_down_button a span:nth-child(1)::after {
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      width: 10px;
+      height: 10px;
+      content: '';
+      margin-left: -5px;
+      border-left: 1px solid #d3b28d;
+      border-bottom: 1px solid #d3b28d;
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      box-sizing: border-box;
+    }
+    #scroll_down_button a span::before {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      content: '';
+      width: 2px;
+      height: 10px;
+      margin-left: -1px;
+      background-color: #d3b28d;
+      border-radius: 50%;
+      -webkit-animation: sdb10 2s infinite;
+      animation: sdb10 2s infinite;
+      box-sizing: border-box;
+    }
+  }
+  .about_text_section2 {
+    width: 100%;
+    display: block;
+    max-height: 1200px;
+    .about_text_section2_columns {
+      width: 100%;
+      max-height: 1000px;
+      display: block;
+      position: relative;
+      margin-top: -200px;
+
+      .about_text_section2_main {
+        width: 90%;
+        height: auto;
+        display: block;
+        float: left;
+        overflow: visible;
+        text-align: center;
+        margin-top: 15%;
+        padding-bottom: 50px;
+        margin-left: 5%;
+      }
+      .text_format {
+        width: 100%;
+
+        vertical-align: middle;
+
+        font-family: "Museo Sans Cyrl 100";
+        line-height: 40px;
+        text-align: center;
+        font-size: 24pt;
+        color: $text_color;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .about_text_section2_columns {
+    width: 100%;
+    height: 1100px;
+    position: relative;
+    margin-top: -100px;
+    z-index: 10;
+    &:after {
+      display: table;
+      clear: both;
+      content: '';
+    }
+    .about_text_section2_main {
+      width: 100%;
+      float: left;
+      overflow: hidden;
+      text-align: center;
+      margin-top: 15%;
+
+    }
+    .text_format {
+      width: 58%;
+      position: absolute;
+      vertical-align: middle;
+      left: 21%;
+      top: 25%;
+      font-family: "Museo Sans Cyrl 100";
+      line-height: 40px;
+      text-align: center;
+      font-size: 24pt;
+      color: $text_color;
+    }
+    .about_text_section2_sidebar-first {
+      float: left;
+      min-width: 300px;
+      height: 100%;
+      margin-left: -100%;
+      position: relative;
+      background: url("../images/left-nuts.png") left no-repeat;
+      background-size: cover;
+    }
+    .about_text_section2_sidebar-second {
+      float: left;
+      width: 300px;
+      height: 100%;
+      margin-left: -300px;
+      position: relative;
+      background: url("../images/raigth-nuts.png") right no-repeat;
+      background-size: cover;
+    }
+  }
+  .header {
+    width: 100%;
+    height: $heigth_img_header;
+  }
+  .triangle-bottomright {
+    z-index: 1;
+    position: absolute;
+    margin-top: 192px;
+    width: 100%;
+    max-height: 770px;
+    background-color: $site_background;
+    -webkit-clip-path: polygon(100% 2%, 100% 1%, 100% 100%, 0 100%);
+    clip-path: polygon(100% 2%, 100% 1%, 100% 100%, 0 100%);
+  }
+  .header_blue_fon {
+    width: 100%;
+    max-height: $heigth_img_header;
+    background-image: url("../images/header_image.png");
+    background-repeat: no-repeat;
+    background-size: inherit;
+    background-attachment: fixed;
+  }
+  .header_content {
+    position: absolute;
+    z-index: 15;
+    width: 688px;
+    left: 50%;
+    margin-left: -344px;
+    height: 120%;
+  }
+  .header_content_text {
+    color: white;
+    font-size: 60pt;
+    font-family: "Museo Sans Cyrl 500";
+    text-align: center;
+    margin-top: 20%;
+    padding-bottom: 30px;
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
+    &:hover {
+      -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+  }
+  .red_button_float_bottom {
+    width: 300px;
+    border: 3px transparent solid;
+    border-radius: 40px;
+    background-color: #ff9676;
+    text-align: center;
+    color: white;
+    position: absolute;
+    left: 50%;
+    margin-top: 10%;
+    margin-left: -150px;
+    transition: all .3s ease 0s;
+    font-size: 28pt;
+    font-family: "Museo Sans Cyrl 500";
+    padding-top: 20px;
+    padding-bottom: 20px;
+    &:hover {
+      border: 3px solid #333;
+      background-color: white;
+      color: #333;
+    }
+  }
+  .header_content_img {
+    display: inline;
+    position: absolute;
+    height: 80px;
+    width: 70px;
+    left: 50%;
+    margin-left: -35px;
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
+    &:hover {
+      -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+
+  }
+
+  #scroll_down_button a {
+    margin-top: 30%;
+    height: 40px;
+    width: 40px;
+    left: 50%;
+    margin-left: -20px;
+    position: absolute;
+
+  }
+  #scroll_down_button a span {
+    position: absolute;
+    z-index: 15;
+    top: 0;
+    left: 50%;
+    width: 34px;
+    height: 50px;
+    margin-left: -17px;
+    border: 2px solid #d3b28d;
+    border-radius: 50px;
+    box-sizing: border-box;
+  }
+  #scroll_down_button a span:nth-child(2)::after {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    content: '';
+    margin-left: -5px;
+    border-left: 1px solid #d3b28d;
+    border-bottom: 1px solid #d3b28d;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    box-sizing: border-box;
+  }
+  #scroll_down_button a span:nth-child(1)::after {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    content: '';
+    margin-left: -5px;
+    border-left: 1px solid #d3b28d;
+    border-bottom: 1px solid #d3b28d;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    box-sizing: border-box;
+  }
+  #scroll_down_button a span::before {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    content: '';
+    width: 2px;
+    height: 10px;
+    margin-left: -1px;
+    background-color: #d3b28d;
+    border-radius: 50%;
+    -webkit-animation: sdb10 2s infinite;
+    animation: sdb10 2s infinite;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (min-width: 1424px) {
+  .text_format {
+    margin-top: 100px;
+  }
+
+  .header_content_text {
+    margin-top: 35%;
+  }
+  .header_content {
+    height: 100%;
+  }
+  .header_blue_fon {
+    background-size: cover;
+  }
+}
+
+@-webkit-keyframes sdb10 {
+  0% {
+    -webkit-transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes sdb10 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
