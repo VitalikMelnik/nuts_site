@@ -3,6 +3,17 @@ $site_background: #fff;
 $text_color: #395084;
 $heigth_img_header: 960px;
 
+@mixin format-text($size, $color, $family) {
+  font-size: $size;
+  color: $color;
+  font-family: $family;
+}
+@mixin hover-item-scale($scale) {
+  &:hover {
+    transform: scale($scale);
+  }
+}
+
 @media screen and (max-width: 1023px) {
   .header_content_img2 {
     display: none;
@@ -154,100 +165,45 @@ $heigth_img_header: 960px;
       box-sizing: border-box;
     }
   }
-  .about_text_section2 {
-    width: 100%;
-    display: block;
-    max-height: 1200px;
-    .about_text_section2_columns {
-      width: 100%;
-      max-height: 1000px;
-      display: block;
-      position: relative;
-      margin-top: -200px;
 
-      .about_text_section2_main {
-        width: 90%;
-        height: auto;
-        display: block;
-        float: left;
-        overflow: visible;
-        text-align: center;
-        margin-top: 15%;
-        padding-bottom: 50px;
-        margin-left: 5%;
-      }
-      .text_format {
-        width: 100%;
-
+  .section2-about-site {
+     width: 100%;
+     height: auto;
+     display: block;
+     position: relative;
+     margin-top: -200px;
+    .section2-div-text_center {
+       width: 90%;
+       height: auto;
+       display: block;
+       text-align: center;
+       margin-top: 15%;
+       padding-bottom: 50px;
+       margin-left: 5%;
+     }
+    .text_format {
+        @include format-text(24pt,$text_color,"Museo Sans Cyrl 100");
         vertical-align: middle;
-
-        font-family: "Museo Sans Cyrl 100";
         line-height: 40px;
         text-align: center;
-        font-size: 24pt;
-        color: $text_color;
       }
     }
   }
-}
+
 
 @media screen and (min-width: 1024px) {
-  .about_text_section2_columns {
-    width: 100%;
-    height: 1100px;
-    position: relative;
-    margin-top: -100px;
-    z-index: 10;
-    &:after {
-      display: table;
-      clear: both;
-      content: '';
-    }
-    .about_text_section2_main {
-      width: 100%;
-      float: left;
-      overflow: hidden;
-      text-align: center;
-      margin-top: 15%;
-
-    }
-    .text_format {
-      width: 58%;
-      position: absolute;
-      vertical-align: middle;
-      left: 21%;
-      top: 25%;
-      font-family: "Museo Sans Cyrl 100";
-      line-height: 40px;
-      text-align: center;
-      font-size: 24pt;
-      color: $text_color;
-    }
-    .about_text_section2_sidebar-first {
-      float: left;
-      min-width: 300px;
-      height: 100%;
-      margin-left: -100%;
-      position: relative;
-      background: url("../images/left-nuts.png") left no-repeat;
-      background-size: cover;
-    }
-    .about_text_section2_sidebar-second {
-      float: left;
-      width: 300px;
-      height: 100%;
-      margin-left: -300px;
-      position: relative;
-      background: url("../images/raigth-nuts.png") right no-repeat;
-      background-size: cover;
-    }
-  }
-  .header {
+  header {
     width: 100%;
     height: $heigth_img_header;
   }
+  .header_blue_fon {
+    width: 100%;
+    max-height: $heigth_img_header;
+    background: url("../images/header_image.png")  no-repeat ;
+    background-attachment: fixed;
+    background-clip: inherit;
+  }
   .triangle-bottomright {
-    z-index: 1;
     position: absolute;
     margin-top: 192px;
     width: 100%;
@@ -256,60 +212,23 @@ $heigth_img_header: 960px;
     -webkit-clip-path: polygon(100% 2%, 100% 1%, 100% 100%, 0 100%);
     clip-path: polygon(100% 2%, 100% 1%, 100% 100%, 0 100%);
   }
-  .header_blue_fon {
-    width: 100%;
-    max-height: $heigth_img_header;
-    background-image: url("../images/header_image.png");
-    background-repeat: no-repeat;
-    background-size: inherit;
-    background-attachment: fixed;
-  }
+
   .header_content {
     position: absolute;
     z-index: 15;
     width: 688px;
     left: 50%;
     margin-left: -344px;
-    height: 120%;
+    height: auto;
   }
   .header_content_text {
-    color: white;
-    font-size: 60pt;
-    font-family: "Museo Sans Cyrl 500";
     text-align: center;
-    margin-top: 20%;
-    padding-bottom: 30px;
-    -webkit-transition: all 0.3s ease;;
-    -moz-transition: all 0.3s ease;;
-    -o-transition: all 0.3s ease;;
+    font-weight: normal;
+    @include format-text(60px,white,"Museo Sans Cyrl 500");
+    @include hover-item-scale(1.1);
     transition: all 0.3s ease;
-    &:hover {
-      -webkit-transform: scale(1.2);
-      -ms-transform: scale(1.2);
-      transform: scale(1.2);
-    }
-  }
-  .red_button_float_bottom {
-    width: 300px;
-    border: 3px transparent solid;
-    border-radius: 40px;
-    background-color: #ff9676;
-    text-align: center;
-    color: white;
-    position: absolute;
-    left: 50%;
-    margin-top: 10%;
-    margin-left: -150px;
-    transition: all .3s ease 0s;
-    font-size: 28pt;
-    font-family: "Museo Sans Cyrl 500";
-    padding-top: 20px;
-    padding-bottom: 20px;
-    &:hover {
-      border: 3px solid #333;
-      background-color: white;
-      color: #333;
-    }
+    margin-top: 130px;
+    margin-bottom: 25px;
   }
   .header_content_img {
     display: inline;
@@ -318,20 +237,38 @@ $heigth_img_header: 960px;
     width: 70px;
     left: 50%;
     margin-left: -35px;
-    -webkit-transition: all 0.3s ease;;
-    -moz-transition: all 0.3s ease;;
-    -o-transition: all 0.3s ease;;
+    @include hover-item-scale(1.2);
     transition: all 0.3s ease;
-    &:hover {
-      -webkit-transform: scale(1.2);
-      -ms-transform: scale(1.2);
-      transform: scale(1.2);
-    }
-
   }
 
+
+  .red_button_float_bottom {
+    width: 250px;
+    height: 65px;
+    cursor: pointer;
+    border: 3px transparent solid;
+    border-radius: 40px;
+    background-color: #ff9676;
+    text-align: center;
+    color: white;
+    position: absolute;
+    left: 50%;
+    margin-top: 130px ;
+    margin-left: -125px;
+    transition: all .3s ease 0s;
+    font-size: 28px;
+    font-family: "Museo Sans Cyrl 500";
+
+    &:hover {
+      border: 3px solid #333;
+      background-color: white;
+      color: #333;
+    }
+  }
+
+
   #scroll_down_button a {
-    margin-top: 30%;
+    margin-top: 227px;
     height: 40px;
     width: 40px;
     left: 50%;
@@ -393,6 +330,58 @@ $heigth_img_header: 960px;
     animation: sdb10 2s infinite;
     box-sizing: border-box;
   }
+
+  .section2-about-site {
+    width: 100%;
+    height: 1100px;
+    position: relative;
+    margin-top: -100px;
+    z-index: 10;
+    &:after {
+      display: table;
+      clear: both;
+      content: '';
+    }
+    .section2-div-text_center {
+      width: 100%;
+      float: left;
+      overflow: hidden;
+      text-align: center;
+      margin-top: 15%;
+
+    }
+    .text_format {
+      width: 58%;
+      position: absolute;
+      vertical-align: middle;
+      left: 21%;
+      top: 25%;
+      font-family: "Museo Sans Cyrl 100";
+      line-height: 40px;
+      text-align: center;
+      font-size: 24pt;
+      color: $text_color;
+    }
+    .section2-about-site-img_left {
+      float: left;
+      min-width: 300px;
+      height: 110%;
+      margin-left: -100%;
+      position: relative;
+      background: url("../images/left-nuts.png") left no-repeat;
+      background-size: cover;
+    }
+    .section2-about-site-img_raigth {
+      float: left;
+      width: 300px;
+      height: 100%;
+      margin-left: -300px;
+      position: relative;
+      background: url("../images/raigth-nuts.png") right no-repeat;
+      background-size: cover;
+    }
+  }
+
 }
 
 @media screen and (min-width: 1424px) {
@@ -401,7 +390,7 @@ $heigth_img_header: 960px;
   }
 
   .header_content_text {
-    margin-top: 35%;
+    margin-top: 225px;
   }
   .header_content {
     height: 100%;

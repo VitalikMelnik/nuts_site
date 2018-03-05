@@ -69,20 +69,20 @@ $(document).ready(function () {
 
 
     //script hide navigation menu
-    var $header = $('#nav');
+    var $header = $('nav');
     var $hHeight = $header.height();
     var prevTop = $(window).scrollTop();
 
 
     $(window).on('scroll', function (e) {
         if (prevTop >= 500) {
-            $("#nav").addClass("scroll-color");
-            $("#nav").removeClass("navigation");
+            $("nav").addClass("scroll-navigation-item_full_content");
+            $("nav").removeClass("navigation");
         } else {
-            $("#nav").removeClass("scroll-color");
-            $("#nav").addClass("navigation");
+            $("nav").removeClass("scroll-navigation-item_full_content");
+            $("nav").addClass("navigation");
         }
-        $('#mobile_menu').removeClass('open');
+        $('#open-menu-button-icon').removeClass('open');
         $header.removeClass('open');
         st = $(this).scrollTop();
         if (st > prevTop && st > $hHeight) {
@@ -98,19 +98,21 @@ $(document).ready(function () {
 
 
     // script for open and close menu in mobile version
-    $('#nav').click(function () {
-        $('#mobile_menu').toggleClass('open');
-        $('#nav').toggleClass('open');
+    $('nav').click(function () {
+        $('#open-menu-button-icon').toggleClass('open');
+        $('nav').toggleClass('open');
     });
 
     //scroll animation for section
+
+
     $('a[href*=#]').on('click', function (e) {
         e.preventDefault();
-        $('html, body').animate({scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+        $('html, body').animate({scrollTop: $($(this).attr('href')).offset().top}, 1000, 'linear');
     });
 
 
-    $("#h1").lettering();
+    $("#text_rotate").lettering();
 
 
 });

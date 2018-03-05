@@ -1,0 +1,23 @@
+%html.no-js{:lang => "en"}
+
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+    %title= "Wally"
+    %link{:href => "/images/golovne.png", :rel => "icon", :type => "image/x-icon"}
+    %meta{:content => data.page.description || "SET YOUR SITE DESCRIPTION", :name => "description"}
+    %meta{:content => "width=device-width", :name => "viewport"}
+    %script{:src => "//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"}
+    %script{:src => "//css-tricks.com/examples/BlurredText/js/jquery.lettering.js"}
+    = javascript_include_tag "site"
+    = stylesheet_link_tag :main
+    = stylesheet_link_tag :navigation
+    = stylesheet_link_tag :section_health_benefits
+    = stylesheet_link_tag :walmut_content_sec2
+    = stylesheet_link_tag :tablet
+    = stylesheet_link_tag :header
+    = stylesheet_link_tag :slider_section
+    = stylesheet_link_tag :footer
+
+  %body
+    = yield
