@@ -1,105 +1,50 @@
-%div.footer#buy_nuts
-  %div.footer_treangl
-
-  %div.footer_header
-    .h33 buy
-    .h44 walnuts
-    %div.table_first_header
-      .h55 Choose your walnut buying plan
-      .underline_head_text
-  %div.tablet
-    %table.mobile_table
-      %tr
-        %td A Walnut
-      %tr
-        %td
-          .p1 7
-          .p2 $
-      %tr
-        %td
-          %ul
-            %li Duis aute irure dolor in reprehenderit
-            %li Excepteur sint occaecat cupidatat on
-            %li Sed ut perspiciatis unde omnis iste   natus
-      %tr
-        %td
-          %div.footer_button Buy
-      %tr
-        %td Walnut+
-      %tr
-        %td
-          .p1 12
-          .p2 $
-      %tr
-        %td
-          %ul
-            %li Duis aute irure dolor in reprehenderit
-            %li Excepteur sint occaecat cupidatat on
-            %li Sed ut perspiciatis unde omnis iste   natus
-            %li Aperiam, eaque ipsa quae ab illo
-      %tr
-        %td
-          %div.footer_button Buy
-      %tr
-        %td Walnut group
-      %tr
-        %td
-          .p1 24
-          .p2 $
-      %tr
-        %td
-          %ul
-            %li Duis aute irure dolor in reprehenderit
-            %li Excepteur sint occaecat cupidatat on
-            %li Sed ut perspiciatis unde omnis iste   natus
-            %li Aperiam, eaque ipsa quae ab illo
-            %li Beatae vitae dicta sunt explicabo.
-      %tr
-        %td
-          %div.footer_button Buy
-
-    %table.pc_table
-      %tr
-        %td A Walnut
-        %td Walnut+
-        %td Walnut group
-      %tr
-        %td
-          .p1 7
-          .p2 $
-        %td
-          .p1 12
-          .p2 $
-        %td
-          .p1 24
-          .p2 $
-      %tr
-        %td
-          %ul
-            %li  Duis aute irure dolor in reprehenderit
-            %li Excepteur sint occaecat cupidatat on
-            %li Sed ut perspiciatis unde omnis iste   natus
-        %td
-          %ul
-            %li  Duis aute irure dolor in reprehenderit
-            %li Excepteur sint occaecat cupidatat on
-            %li Sed ut perspiciatis unde omnis iste   natus
-            %li Aperiam, eaque ipsa quae ab illo
-
-        %td
-          %ul
-            %li  Duis aute irure dolor in reprehenderit
-            %li Excepteur sint occaecat cupidatat on
-            %li Sed ut perspiciatis unde omnis iste   natus
-            %li Aperiam, eaque ipsa quae ab illo
-            %li Beatae vitae dicta sunt explicabo.
-
-
-
-      %tr
-        %td
-          %div.footer_button Buy
-        %td
-          %div.footer_button Buy
-        %td
-          %div.footer_button Buy
+%footer
+  %div.footer-treangl_top
+  %div.footer-treangl_bottom
+  %div.footer-header#buy_nuts
+    %h3.footer-header-word_first buy
+    %h3.footer-header-word_second walnuts
+    %div.table-header-div
+      %h4.tablet-header Choose your walnut buying plan
+      .header-teble_underline
+  %table
+    %tr
+      %td A Walnut
+      %td Walnut+
+      %td Walnut group
+    %tr
+      %td{"data-label" => "A Walnut"}
+        .p1 7
+        .p2 $
+      %td{"data-label" => "Walnut+"}
+        .p1 12
+        .p2 $
+      %td{"data-label" => "Walnut group"}
+        .p1 24
+        .p2 $
+    %tr
+      %td{"data-label" => " A Walnut"}
+        %ul.first
+          %li  Duis aute irure dolor in reprehenderit
+          %li Excepteur sint occaecat cupidatat non
+          %li Sed ut perspiciatis unde omnis iste
+      %td{"data-label" => "Walnut+"}
+        %ul
+          %li  Duis aute irure dolor in reprehenderit
+          %li Excepteur sint occaecat cupidatat non
+          %li Sed ut perspiciatis unde omnis iste
+          %li Aperiam, eaque ipsa quae ab illo
+      %td{"data-label" => "Walnut group"}
+        %ul
+          %li  Duis aute irure dolor in reprehenderit
+          %li Excepteur sint occaecat cupidatat non
+          %li Sed ut perspiciatis unde omnis iste
+          %li Aperiam, eaque ipsa quae ab illo
+          %li Beatae vitae dicta sunt explicabo.
+    %tr
+      %td{"data-label" => " A Walnut"}
+        %button.footer_button Buy
+      %td{"data-label" => "Walnut+"}
+        %button.footer_button Buy
+      %td{"data-label" => "Walnut group"}
+        %button.footer_button Buy

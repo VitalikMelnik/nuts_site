@@ -1,348 +1,347 @@
 $section_background_color: #eff1f5;
-$number_color_higest:#e3e4eb;
-$header_color_h3:#e3b886;
-$text_color:#395084;
-$randomNumber :random(300);
+$number_color_higest: #e3e4eb;
+$header_color_h3: #e3b886;
+$text_color: #395084;
+
+@mixin format-text($size, $color, $family) {
+  font-size: $size;
+  color: $color;
+  font-family: $family;
+}
+
+@mixin create-animation-img($marg_top,$marg_left,$name-animation,$second) {
+  margin-top: $marg_top;
+  margin-left: $marg_left;
+  animation-name: $name-animation;
+  animation-duration: $second;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
 
 @keyframes floating {
-  from { transform: translate(0,  0px); }
-  65%  { transform: translate(0, 15px); }
-  to   { transform: translate(0, -0px); }
-}
-@keyframes floating2 {
-  from { transform: translate(0,  0px); }
-  65%  { transform: translate(0, -15px); }
-  to   { transform: translate(0, -0px); }
-}
-@keyframes circle {
-  from { transform: translate(0,  0px); }
-  50%  { transform: translate(-50px, -50px); }
-  to   { transform: translate(0, -0px); }
-}
-@keyframes circle2 {
-  from { transform: translate(0,  0px); }
-  50%  { transform: translate(-50px, 0px); }
-  to   { transform: translate(0, -0px); }
-}
-@keyframes latidos {
-  from { transform: none; }
-  50% { transform: scale(1.2); }
-  to { transform: none; }
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, 15px);
+  }
+  to {
+    transform: translate(0, -0px);
+  }
 }
 
-@media screen and (min-width: 10px) and (max-width: 1023px) {
+@keyframes floating2 {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, -15px);
+  }
+  to {
+    transform: translate(0, -0px);
+  }
+}
+
+@keyframes circle {
+  from {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(-50px, -50px);
+  }
+  to {
+    transform: translate(0, -0px);
+  }
+}
+
+@keyframes circle2 {
+  from {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(-50px, 0px);
+  }
+  to {
+    transform: translate(0, -0px);
+  }
+}
+
+@keyframes latidos {
+  from {
+    transform: none;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@media screen and (min-width: 10px) and (max-width: 1323px) {
 
   .health_section {
-    height: 1700px;
     display: block;
     width: 100%;
-    background: $section_background_color url("../images/section4.png") right no-repeat;
-    z-index: 8;
+    height: 1600px;
+    background: $section_background_color;
     .content {
-      z-index: 15;
-      width: 100%;
       height: auto;
-      display: block;
       position: absolute;
-
-      .health_hed1 {
-        display: block;
-        width: 100%;
-        text-align: center;
-        font-size: 45pt;
-        font-weight: 100;
-        color: $number_color_higest;
-        text-transform: uppercase;
-        font-family: "Museo Sans Cyrl 100";
-        float: left;
-
-      }
-      .health_hed2 {
-        display: block;
-        width: 100%;
-        text-align: center;
-        font-size: 45pt;
-        font-weight: 700;
-        color: $number_color_higest;
-        text-transform: uppercase;
-        font-family: "Museo Sans Cyrl 700";
-
+      width: 80%;
+      margin-left: 10%;
+      .head {
+        margin-top: 100px;
+        .health_hed1 {
+          @include format-text(60px, $number_color_higest, "Museo Sans Cyrl 100");
+          text-transform: uppercase;
+          font-weight: 100;
+          width: 100%;
+          display: block;
+          text-align: center;
+        }
+        .health_hed2 {
+          @include format-text(60px, $number_color_higest, "Museo Sans Cyrl 700");
+          text-transform: uppercase;
+          font-weight: 700;
+          width: 100%;
+          display: block;
+          text-align: center;
+        }
       }
     }
   }
   .img_animate {
-    position: absolute;
-    z-index: 10;
-
-    //1700
-    &:nth-child(1) {
-      margin-top: 400px;
-
-      animation-name: circle;
-      animation-duration: 3s;
-      animation-iteration-count: infinite;
-      animation-timing-function: ease-in-out;
-    }
-    &:nth-child(2) {
-      margin-top: 970px;
-      margin-left: 60px;
-      animation-name: latidos;
-      animation-duration: 3s;
-      animation-iteration-count: infinite;
-      animation-timing-function: ease-in-out;
-    }
-    &:nth-child(3) {
-      margin-top: 900px;
-      z-index: 1;
-      animation-name: floating;
-      animation-duration: 2s;
-      animation-iteration-count: infinite;
-      animation-timing-function: ease-in-out;
-    }
-    &:nth-child(4) {
-      animation-name: floating2;
-      animation-duration: 2s;
-      animation-iteration-count: infinite;
-      animation-timing-function: ease-in-out;
-      margin-left: 60px;
-    }
-    &:nth-child(5) {
-      animation-name: circle2;
-      animation-duration: 3s;
-      animation-iteration-count: infinite;
-      animation-timing-function: ease-in-out;
-      margin-top: 800px;
-      margin-left: 30px;
-    }
+    display: none;
   }
 
   .module {
-
     margin-left: 5%;
     width: 90%;
     height: auto;
     float: left;
     display: inline-block;
-    transition: all 0.5s linear;
-    &:hover {
-      border-radius: 30px;
-      -webkit-box-shadow: 10px 10px 146px -24px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 10px 10px 146px -24px rgba(0, 0, 0, 0.75);
-      box-shadow: 10px 10px 146px -24px rgba(0, 0, 0, 0.75);
-      background: rgba(212, 228, 239, 0.7);
-      margin-left: 2%;
-      padding: 10px;
-      h2 {
-        color: white;
-      }
-    }
-    h2 {
+    //transition: all 0.5s linear;
+    //&:hover {
+    //  border-radius: 30px;
+    //  -webkit-box-shadow: 10px 10px 146px -24px rgba(0, 0, 0, 0.75);
+    //  -moz-box-shadow: 10px 10px 146px -24px rgba(0, 0, 0, 0.75);
+    //  box-shadow: 10px 10px 146px -24px rgba(0, 0, 0, 0.75);
+    //  background: rgba(212, 228, 239, 0.7);
+    //  margin-left: 2%;
+    //  padding: 10px;
+    //  h2 {
+    //    color: white;
+    //  }
+    //}
+    span {
+      @include format-text(100px, $number_color_higest, "Museo Sans Cyrl 700");
       margin: 0;
       padding: 0;
-      color: $number_color_higest;
-      font-size: 100pt;
     }
-
-    h3 {
+    h4 {
+      @include format-text(24px, $header_color_h3, "Museo Sans Cyrl 700");
       margin: 0;
       padding: 0;
-      color: $header_color_h3;
-      font-size: 24pt;
       text-transform: uppercase;
+      margin-top: -5px;
     }
     p {
-      font-size: 14pt;
-      color: $text_color;
+      @include format-text(14px, $text_color, "Museo Sans Cyrl 100");
+      margin-top: 30px;
+      line-height: 20px;
     }
   }
 }
 
-@media screen and (min-width: 600px) {
-  .module {
-    &:nth-child(even) {
-      margin-top: 150px;
-    }
-    margin-left: 5%;
-    width: 40%;
+@media screen and (min-width: 550px) {
+  .health_section {
+    height: 1400px;
   }
 }
 
-@media screen and (min-width: 1024px) {
-
-  .health_section{
-    height: 1750px;
+@media screen and (min-width: 730px) {
+  .health_section {
     display: block;
     width: 100%;
-    background: $section_background_color url("../images/section4.png") right no-repeat ;
+    height: 1200px;
+    background: $section_background_color url("../images/section4.png") center no-repeat;
+    background-size: contain;
     z-index: 8;
-    .content{
+    .content {
       z-index: 15;
-      width: 80%;
-      height: 100%;
+      height: auto;
       position: absolute;
+      width: 80%;
       margin-left: 10%;
       .head {
-        margin-top: 170px;
-
+        margin-top: 100px;
         .health_hed1 {
-          font-size: 120pt;
-          font-family: "Museo Sans Cyrl 100";
-
-          color: $number_color_higest;
+          @include format-text(60px, $number_color_higest, "Museo Sans Cyrl 100");
           text-transform: uppercase;
-          display: block;
-          float: left;
+          font-weight: 100;
+          text-align: center;
+          width: 100%;
         }
         .health_hed2 {
-          font-family: "Museo Sans Cyrl 700";
-
-          font-size: 120pt;
-          font-weight: 700;
-          color: $number_color_higest;
+          @include format-text(60px, $number_color_higest, "Museo Sans Cyrl 700");
           text-transform: uppercase;
-          margin-left: 50px;
-          display: inline;
-
+          font-weight: 700;
+          text-align: center;
+          width: 100%;
         }
       }
     }
   }
-  .img_animate{
-    position: absolute;
-    z-index: 10;
 
-
-    &:nth-child(1){
-      margin-top: 100px;
-      margin-left: 50%;
-      animation-name: circle;
-      animation-duration: 3s;
-      animation-iteration-count: infinite;
-      animation-timing-function: ease-in-out;
-    }
-    &:nth-child(2){
-      margin-top: 500px;
-      margin-left: 10%;
-      animation-name: latidos;
-      animation-duration: 3s;
-      animation-iteration-count: infinite;
-      animation-timing-function: ease-in-out;
-    }
-    &:nth-child(3){
-      margin-top: 400px;
-      z-index: 1;
-      animation-name: floating;
-      animation-duration: 2s;
-      animation-iteration-count: infinite;
-      animation-timing-function: ease-in-out;
-    }
-    &:nth-child(4){
-      animation-name: floating2;
-      animation-duration: 2s;
-      animation-iteration-count: infinite;
-      animation-timing-function: ease-in-out;
-      margin-left: 70%;
-      margin-top: 100px;
-    }
-    &:nth-child(5){
-      animation-name: circle2;
-      animation-duration: 3s;
-      animation-iteration-count: infinite;
-      animation-timing-function: ease-in-out;
-      margin-top: 400px;
-      margin-left: 30%;
-    }
-  }
   .autowide {
-    margin-top: 70px;
+    margin-top: 20px;
     .module {
+      margin-left: 5%;
       &:nth-child(even) {
-        margin-top: 350px;
+        margin-top: 150px;
       }
-      margin-left: 2%;
-      margin-right: 2%;
-      width: 20%;
-      height: 50%;
+      &:nth-child(1) {
+        margin-left: 0px;
+      }
+      &:nth-child(3) {
+        margin-left: 0px;
+      }
+      width: 45%;
+      height: auto;
       float: left;
       display: inline-block;
-
-      h2 {
+      span {
+        @include format-text(100px, $number_color_higest, "Museo Sans Cyrl 700");
         margin: 0;
         padding: 0;
-        color: $number_color_higest;
-        font-size: 100pt;
-        font-family: "Museo Sans Cyrl 700";
       }
-
-      h3 {
-
+      h4 {
+        @include format-text(24px, $header_color_h3, "Museo Sans Cyrl 700");
         margin: 0;
         padding: 0;
-        color: $header_color_h3;
-        font-size: 24pt;
         text-transform: uppercase;
-        font-family: "Museo Sans Cyrl 700";
         margin-top: -5px;
       }
       p {
+        @include format-text(14px, $text_color, "Museo Sans Cyrl 100");
         margin-top: 30px;
-        font-size: 14pt;
-        color: $text_color;
-        font-family: "Museo Sans Cyrl 100";
-        line-height: 20pt;
+        line-height: 20px;
       }
     }
   }
 }
 
-@media screen and (min-width: 1800px) {
-  .img_animate{
+@media screen and (min-width: 1324px) {
+
+  .health_section {
+    display: block;
+    width: 100%;
+    height: 1020px;
+    background: $section_background_color url("../images/section4.png") center no-repeat;
+    background-size: cover;
+    z-index: 8;
+    .content {
+      z-index: 15;
+      max-width: 1220px;
+      height: 700px;
+      position: absolute;
+      margin: auto;
+      left: 50%;
+      margin-left: -610px;
+      .head {
+        margin-top: 100px;
+        .health_hed1 {
+          @include format-text(120px, $number_color_higest, "Museo Sans Cyrl 100");
+          text-transform: uppercase;
+          font-weight: 100;
+          display: inline;
+          margin: 0;
+          width: auto;
+        }
+        .health_hed2 {
+          @include format-text(120px, $number_color_higest, "Museo Sans Cyrl 700");
+          text-transform: uppercase;
+          margin-left: 50px;
+          font-weight: 700;
+          display: inline;
+          width: auto;
+        }
+      }
+    }
+  }
+
+  .img_animate {
     position: absolute;
     z-index: 10;
-
-    //1300px
-    &:nth-child(1){
-      margin-top: 1000px;
-      margin-left: 50%;
-      animation-name: circle;
-      animation-duration: 3s;
-      animation-iteration-count: infinite;
-      animation-timing-function: ease-in-out;
+    &:nth-child(1) {
+      @include create-animation-img(750, 52%, circle, 5s);
     }
-    &:nth-child(2){
-      margin-top: 500px;
-      margin-left: 10%;
-      animation-name: latidos;
-      animation-duration: 3s;
-      animation-iteration-count: infinite;
-      animation-timing-function: ease-in-out;
+    &:nth-child(2) {
+      @include create-animation-img(300, 15%, latidos, 6s);
     }
-    &:nth-child(3){
-      margin-top: 400px;
+    &:nth-child(3) {
+      @include create-animation-img(150, 0, floating, 5s);
       z-index: 1;
-      animation-name: floating;
-      animation-duration: 2s;
-      animation-iteration-count: infinite;
-      animation-timing-function: ease-in-out;
     }
-    &:nth-child(4){
-      animation-name: floating2;
-      animation-duration: 2s;
-      animation-iteration-count: infinite;
-      animation-timing-function: ease-in-out;
-      margin-left: 70%;
-      margin-top: 100px;
+    &:nth-child(4) {
+      @include create-animation-img(30, 70%, floating2, 5s);
     }
-    &:nth-child(5){
-      animation-name: circle2;
-      animation-duration: 3s;
-      animation-iteration-count: infinite;
-      animation-timing-function: ease-in-out;
-      margin-top: 500px;
-      margin-left: 30%;
+    &:nth-child(5) {
+      @include create-animation-img(280, 30%, circle2, 6s);
     }
   }
-  .health_section{
-    height: 1300px;
+
+  .autowide {
+    margin-top: 20px;
+    .module {
+      margin-left: 5%;
+      &:nth-child(even) {
+        margin-top: 230px;
+      }
+      &:nth-child(1) {
+        margin-left: 0px;
+        p {
+          width: 98%;
+        }
+      }
+      &:nth-child(2) {
+        p {
+          width: 98%;
+        }
+      }
+      &:nth-child(3) {
+        p {
+          width: 90%;
+        }
+      }
+      &:nth-child(4) {
+        p {
+          width: 80%;
+        }
+      }
+      width: 21%;
+      height: auto;
+      float: left;
+      display: inline-block;
+      span {
+        @include format-text(100px, $number_color_higest, "Museo Sans Cyrl 700");
+        margin: 0;
+        padding: 0;
+      }
+      h4 {
+        @include format-text(24px, $header_color_h3, "Museo Sans Cyrl 700");
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+        margin-top: -5px;
+      }
+      p {
+        @include format-text(14px, $text_color, "Museo Sans Cyrl 100");
+        margin-top: 30px;
+        line-height: 20px;
+      }
+    }
   }
 }
+

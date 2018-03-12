@@ -65,34 +65,34 @@ $text_color_section2: #395084;
   $li: 6;
   $icon-size: 300px;
   $menu-size: 300px / 2;
-  $unit-size: 100px;
+  $unit-size: 93px;
   $menu-position: (($menu-size * 2) - $icon-size) / -2;
-  $offset: 150px;
+  $offset: 135px;
   $deg: 360deg / $li;
 
-  .section_about_vitamin_mineral {
+  .section-about-vitamin-mineral {
     transform: translate3d(0, 0, 0);
     width: 100%;
     background: url("../images/section2.png") center no-repeat;
     background-size: cover;
     display: inline-block;
-    .section3_colum:nth-child(2) {
+    .section-about-vitamin-mineral-colum:nth-child(2) {
       height: 470px;
     }
-    .section3_colum {
+    .section-about-vitamin-mineral-colum {
       display: block;
       height: auto;
       width: 100%;
       flex-flow: row wrap;
       justify-content: center;
-      .center_header {
+      .section-header_center {
         @include format-text(16px, $text_color_section2, "Museo Sans Cyrl 300");
         text-transform: uppercase;
         text-align: center;
         position: absolute;
         width: 100%;
       }
-      .header_vitamins {
+      .header-vitamins {
         @include format-text(36px, $text_color_section2, "Museo Sans Cyrl 300");
         padding-bottom: 45px;
       }
@@ -108,7 +108,7 @@ $text_color_section2: #395084;
     }
   }
 
-  .circle_section2 {
+  .section-circle_absolute_center {
     @include greate_circle(-150px, -150px, $icon-size);
     .badge {
       display: none;
@@ -116,7 +116,7 @@ $text_color_section2: #395084;
     li {
       list-style: none;
     }
-    .center_nuts_section2 {
+    .img-in_absolute_circle {
       @include position-img(50%, 50%, 80, -60);
     }
   }
@@ -132,7 +132,7 @@ $text_color_section2: #395084;
     transform-origin: $offset $offset;
   }
 
-  .circle_section2 {
+  .section-circle_absolute_center {
     .menu {
       transition: transform 0.4s 0.08s,
       z-index 0s 0.5s;
@@ -173,20 +173,20 @@ $text_color_section2: #395084;
   $offset: 220px;
   $deg: 360deg / $li;
 
-  .section_about_vitamin_mineral {
-    .section3_colum:nth-child(2) {
+  .section-about-vitamin-mineral {
+    .section-about-vitamin-mineral-colum:nth-child(2) {
       height: 700px;
     }
   }
 
-  .circle_section2 {
+  .section-circle_absolute_center {
     @include greate_circle(-250, -250, $icon-size);
 
     .badge {
       margin-left: -85px;
       margin-top: 80px;
     }
-    .center_nuts_section2 {
+    .img-in_absolute_circle {
       @include position-img(50%, 50%, 140, -100);
     }
   }
@@ -221,7 +221,7 @@ $text_color_section2: #395084;
   $offset: 320px;
   $deg: 360deg / $li;
 
-  .section_about_vitamin_mineral {
+  .section-about-vitamin-mineral {
     margin-top: -380px;
     transform: translate3d(0, 0, 0);
     width: 100%;
@@ -229,28 +229,28 @@ $text_color_section2: #395084;
     background: url("../images/section2.png") center no-repeat;
     background-size: cover;
     display: inline-block;
-    .section3_colum:nth-child(2) {
+    .section-about-vitamin-mineral-colum:nth-child(2) {
       height: 1000px;
     }
-    .section3_colum {
+    .section-about-vitamin-mineral-colum {
       display: block;
       height: 500px;
       width: 100%;
       flex-flow: row wrap;
       justify-content: center;
-      .center_header {
+      .section-header_center {
         @include format-text(48px, $text_color_section2, "Museo Sans Cyrl 300");
         font-weight: normal;
         position: absolute;
         width: 100%;
         text-align: center;
       }
-      .header_vitamins {
+      .header-vitamins {
         @include format-text(36px, $text_color_section2, "Museo Sans Cyrl 300");
         padding-bottom: 45px;
       }
       ul {
-        padding: 0px;
+        padding: 0;
       }
       li {
         @include format-text(16px, $text_color_section2, "Museo Sans Cyrl 300");
@@ -261,17 +261,17 @@ $text_color_section2: #395084;
     }
   }
 
-  .circle_section2 {
+  .section-circle_absolute_center {
     opacity: 0.8;
     &:hover {
       opacity: 1.0;
     }
-    @include greate_circle(-300,-325,$icon-size);
+    @include greate_circle(-300, -325, $icon-size);
     transition: 0.24s 0.2s;
 
     .badge {
       margin-left: -175px;
-      margin-top: 510px;
+      margin-top: 490px;
       position: relative;
       width: 400px;
       border-radius: 30%;
@@ -339,13 +339,13 @@ $text_color_section2: #395084;
     .char15 {
       transform: rotate(60deg);
     }
-    .center_nuts_section2 {
-      @include  position-img(480,395,-300,-190);
+    .img-in_absolute_circle {
+      @include position-img(480, 395, -310, -190);
     }
   }
 
   .menu {
-    @include menu_greate($menu-position,$menu-size);
+    @include menu_greate($menu-position, $menu-size);
     transform: scale(0);
     transition: transform 1.4s 0.07s;
   }
@@ -358,7 +358,7 @@ $text_color_section2: #395084;
     transition: all 0.5s 0.1s;
   }
 
-  .circle_section2:hover {
+  .section-circle_absolute_center:hover {
     .menu {
       transition: transform 0.4s 0.08s,
       z-index 0s 0.5s;
@@ -385,13 +385,13 @@ $text_color_section2: #395084;
     @include unit-great($unit-size);
     transition: 0.6s;
     .p1 {
-      @include format-text(36px,$text_color_section2,"Museo Sans Cyrl 500");
+      @include format-text(36px, $text_color_section2, "Museo Sans Cyrl 500");
       margin-top: 55px;
       @include hover-item-scale(1.2);
       transition: all 0.3s ease;
     }
     .p2 {
-      @include format-text(18px,$text_color_section2,"Museo Sans Cyrl 500");
+      @include format-text(18px, $text_color_section2, "Museo Sans Cyrl 500");
       margin-top: 20px;
       @include hover-item-scale(1.2);
       transition: all 0.3s ease;
@@ -401,10 +401,10 @@ $text_color_section2: #395084;
 
 @media screen and (min-width: 1424px) {
 
-  .section3_colum:nth-child(2) {
+  .section-about-vitamin-mineral-colum:nth-child(2) {
     height: 100%;
   }
-  .section_about_vitamin_mineral {
+  .section-about-vitamin-mineral {
     margin-top: -380px;
     transform: translate3d(0, 0, 0);
     width: 100%;
@@ -412,13 +412,13 @@ $text_color_section2: #395084;
     background: url("../images/section2.png") center no-repeat;
     background-size: cover;
     display: inline-block;
-    .center_header {
+    .section-header_center {
       @include format-text(48px, $text_color_section2, "Museo Sans Cyrl 300");
       position: absolute;
       margin-top: 80px !important;
       margin-left: 0 !important;
     }
-    .section3_colum {
+    .section-about-vitamin-mineral-colum {
       float: left;
       display: flex;
       height: 1120px;
@@ -426,23 +426,20 @@ $text_color_section2: #395084;
       flex-flow: row wrap;
       justify-content: center;
       ul {
-        margin: auto;
-        width: 30%;
-        float: right;
-        margin-left: 50%;
+        margin: auto auto auto 50%;
+        width: 50%;
       }
-      .ul_rigth {
-        margin-left: 20%;
+      .ul-rigth {
+        margin: auto 20% auto auto;
       }
-      .header_vitamins {
+      .header-vitamins {
         font-size: 36px;
         padding-bottom: 50px;
         margin-left: -30px;
       }
       li {
         font-size: 16px;
-        padding: 13px;
-        padding-left: 30px;
+        padding: 13px 13px 13px 30px;
         list-style: none;
         text-align: left;
         @include hover-item-scale(1.2);

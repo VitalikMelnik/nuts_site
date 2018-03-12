@@ -76,11 +76,11 @@ $(document).ready(function () {
 
     $(window).on('scroll', function (e) {
         if (prevTop >= 500) {
-            $("nav").addClass("scroll-navigation-item_full_content");
-            $("nav").removeClass("navigation");
+            $header.addClass("scroll-navigation-item_full_content");
+            $header.removeClass("navigation");
         } else {
-            $("nav").removeClass("scroll-navigation-item_full_content");
-            $("nav").addClass("navigation");
+            $header.removeClass("scroll-navigation-item_full_content");
+            $header.addClass("navigation");
         }
         $('#open-menu-button-icon').removeClass('open');
         $header.removeClass('open');
@@ -98,9 +98,10 @@ $(document).ready(function () {
 
 
     // script for open and close menu in mobile version
-    $('nav').click(function () {
+    $header.click(function () {
         $('#open-menu-button-icon').toggleClass('open');
-        $('nav').toggleClass('open');
+        $header.addClass("navigation");
+        $header.toggleClass('open');
     });
 
     //scroll animation for section
