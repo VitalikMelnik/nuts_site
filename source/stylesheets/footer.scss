@@ -15,6 +15,7 @@ $footer-red-color: #ff9676;
     margin-left: $m-left;
     margin-top: $m-top;
     z-index: 4;
+    text-align: center;
     .footer-header-word_first {
       @include format-text($font-size, $footer_header_color, "Museo Sans Cyrl 700");
       text-transform: uppercase;
@@ -22,6 +23,7 @@ $footer-red-color: #ff9676;
       font-weight: 700;
       width: 100%;
       text-align: center;
+
     }
     .footer-header-word_second {
       @include format-text($font-size, $footer_header_color, "Museo Sans Cyrl 100");
@@ -30,6 +32,7 @@ $footer-red-color: #ff9676;
       width: 100%;
       font-weight: 100;
       text-align: center;
+
     }
   }
 }
@@ -50,6 +53,7 @@ $footer-red-color: #ff9676;
       position: absolute;
       margin-top: 35px;
       border-bottom: 4px solid #395084;
+      -webkit-transition: all 0.4s ease-out;
       transition: all 0.4s ease-out;
     }
     &:hover {
@@ -64,18 +68,22 @@ $footer-red-color: #ff9676;
 @mixin footer-buuton() {
   .footer_button {
     width: 110px;
+    position: absolute;
+    left: 50%;
+    margin-left: -55px;
     box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.1);
     height: 30px;
     border-radius: 30px;
     border: 0px;
     background-color: white;
     color: black;
-    margin: 0 auto;
+
     font-size: 18px;
     text-align: center;
     font-family: "Museo Sans Cyrl 500";
     cursor: pointer;
     outline: none;
+    -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
     &:hover {
       background-color: $footer-red-color;
@@ -86,16 +94,19 @@ $footer-red-color: #ff9676;
 }
 
 @media screen and (max-width: 1323px) {
+
   .footer-treangl_top {
     z-index: 1;
     position: absolute;
     width: 100%;
     min-height: 332px;
     background-color: white;
+    -webkit-clip-path: polygon(100% 0, 0 0, 0 100%);
     clip-path: polygon(100% 0, 0 0, 0 100%);
     margin-top: -200px;
   }
   .footer-treangl_bottom {
+    -webkit-clip-path: polygon(100% 100%, 0% 100%, 100% 0);
     clip-path: polygon(100% 100%, 0% 100%, 100% 0);
     background: $footer-bg-color;
     position: absolute;
@@ -110,32 +121,42 @@ $footer-red-color: #ff9676;
     padding-bottom: 100px;
     background-color: $footer-bg-color;
   }
-  @include footer-header(80%, 10%, 200px, 60px);
+  @include footer-header(90%, 5%, 200px, 48px);
   @include table-header-div(100%, 45px);
   table {
     @include footer-buuton();
     margin-top: 50px;
-    width: 80%;
-    margin-left: 10%;
+    width: 90%;
+    margin-left: 5%;
+    display: block;
     td {
-
-      @include format-text(23.15px, $tablet-blue-color, "Museo Sans Cyrl 500");
       padding: 40px;
       border: 1px solid #fff;
-      display: flex;
+      display: block;
+      float: left;
+
+      width: 100%;
+      @include format-text(23.15px, $tablet-blue-color, "Museo Sans Cyrl 500");
       &:before {
         content: attr(data-label) " : ";
-        flex: 0 0 5em;
-        font-weight: bold;
-        margin-right: 1em;
-        margin-bottom: 0.25em;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 20px;
       }
+
     }
+
     tr {
+      display: flex;
+      flex-wrap: wrap;
+
       &:nth-child(1) {
-        display: none;
+        display: none !important;
       }
       &:nth-child(2) td {
+        text-align: center;
+
         .p1 {
           &:after {
             content: attr(data-label) " $ ";
@@ -151,7 +172,7 @@ $footer-red-color: #ff9676;
     }
 
     ul {
-      width: 50%;
+      width: 90%;
       margin: 0 auto;
       padding: 0;
       li {
@@ -177,10 +198,12 @@ $footer-red-color: #ff9676;
     width: 100%;
     min-height: 772px;
     background-color: white;
+    -webkit-clip-path: polygon(100% 0, 0 0, 0 100%);
     clip-path: polygon(100% 0, 0 0, 0 100%);
     margin-top: -350px;
   }
   .footer-treangl_bottom {
+    -webkit-clip-path: polygon(100% 100%, 0% 100%, 100% 0);
     clip-path: polygon(100% 100%, 0% 100%, 100% 0);
     background: $footer-bg-color;
     position: absolute;
@@ -329,3 +352,4 @@ $footer-red-color: #ff9676;
     }
   }
 }
+

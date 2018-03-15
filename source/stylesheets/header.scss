@@ -11,6 +11,8 @@ $heigth_img_header: 960px;
 
 @mixin hover-item-scale($scale) {
   &:hover {
+    -webkit-transform: scale($scale);
+    -ms-transform: scale($scale);
     transform: scale($scale);
   }
 }
@@ -43,6 +45,8 @@ $heigth_img_header: 960px;
     font-weight: normal;
     @include format-text(60px, white, "Museo Sans Cyrl 500");
     @include hover-item-scale(1.1);
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
     margin-top: $m-top-text;
     margin-bottom: 25px;
@@ -55,6 +59,8 @@ $heigth_img_header: 960px;
     left: 50%;
     margin-left: -35px;
     @include hover-item-scale(1.2);
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
   .red_button_float_bottom {
@@ -70,6 +76,8 @@ $heigth_img_header: 960px;
     left: 50%;
     margin-top: $m-top-button;
     margin-left: -125px;
+    -webkit-transition: all .3s ease 0s;
+    -o-transition: all .3s ease 0s;
     transition: all .3s ease 0s;
     @include format-text(28px, white, "Museo Sans Cyrl 500");
     &:hover {
@@ -96,6 +104,7 @@ $heigth_img_header: 960px;
     margin-left: -17px;
     border: 2px solid #d3b28d;
     border-radius: 50px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
   #scroll_down_button a span:nth-child(2)::after {
@@ -109,7 +118,9 @@ $heigth_img_header: 960px;
     border-left: 1px solid #d3b28d;
     border-bottom: 1px solid #d3b28d;
     -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
   #scroll_down_button a span:nth-child(1)::after {
@@ -123,7 +134,9 @@ $heigth_img_header: 960px;
     border-left: 1px solid #d3b28d;
     border-bottom: 1px solid #d3b28d;
     -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
   #scroll_down_button a span::before {
@@ -138,6 +151,7 @@ $heigth_img_header: 960px;
     border-radius: 50%;
     -webkit-animation: sdb10 2s infinite;
     animation: sdb10 2s infinite;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
 }
@@ -152,6 +166,7 @@ $heigth_img_header: 960px;
   }
   .header_blue_fon {
     @include greate-blye-fon();
+
   }
   .triangle-bottomright {
     z-index: 0;
@@ -188,7 +203,7 @@ $heigth_img_header: 960px;
   }
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 20px) {
   .header {
     width: 100%;
     height: 960px;
@@ -198,7 +213,8 @@ $heigth_img_header: 960px;
     min-height: 960px;
     background-image: url("../images/header_image.png");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-clip: inherit;
+
   }
 
   .triangle-bottomright {
@@ -288,8 +304,9 @@ $heigth_img_header: 960px;
   }
 }
 
-@keyframes sdb10 {
+@-webkit-keyframes sdb10 {
   0% {
+    -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
     opacity: 0;
   }
@@ -297,6 +314,26 @@ $heigth_img_header: 960px;
     opacity: 1;
   }
   80% {
+    -webkit-transform: translate(0, 20px);
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes sdb10 {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translate(0, 20px);
     transform: translate(0, 20px);
     opacity: 0;
   }

@@ -57,20 +57,23 @@ $text_color_section2: #395084;
 
 @mixin hover-item-scale($scale) {
   &:hover {
+    -webkit-transform: scale($scale);
+    -ms-transform: scale($scale);
     transform: scale($scale);
   }
 }
 
 @media screen and (max-width: 1023px) {
   $li: 6;
-  $icon-size: 300px;
+  $icon-size: 280px;
   $menu-size: 300px / 2;
   $unit-size: 93px;
   $menu-position: (($menu-size * 2) - $icon-size) / -2;
-  $offset: 135px;
+  $offset: 120px;
   $deg: 360deg / $li;
 
   .section-about-vitamin-mineral {
+    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     width: 100%;
     background: url("../images/section2.png") center no-repeat;
@@ -83,7 +86,12 @@ $text_color_section2: #395084;
       display: block;
       height: auto;
       width: 100%;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
       flex-flow: row wrap;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
       .section-header_center {
         @include format-text(16px, $text_color_section2, "Museo Sans Cyrl 300");
@@ -109,7 +117,7 @@ $text_color_section2: #395084;
   }
 
   .section-circle_absolute_center {
-    @include greate_circle(-150px, -150px, $icon-size);
+    @include greate_circle(-140px, -140px, $icon-size);
     .badge {
       display: none;
     }
@@ -129,20 +137,37 @@ $text_color_section2: #395084;
     position: absolute;
     top: -($offset);
     left: -($offset);
+    -webkit-transform-origin: $offset $offset;
+    -ms-transform-origin: $offset $offset;
     transform-origin: $offset $offset;
   }
 
   .section-circle_absolute_center {
     .menu {
+      -webkit-transition: z-index 0s 0.5s,
+      -webkit-transform 0.4s 0.08s;
+      transition: z-index 0s 0.5s,
+      -webkit-transform 0.4s 0.08s;
+      -o-transition: transform 0.4s 0.08s,
+      z-index 0s 0.5s;
       transition: transform 0.4s 0.08s,
       z-index 0s 0.5s;
+      transition: transform 0.4s 0.08s,
+      z-index 0s 0.5s,
+      -webkit-transform 0.4s 0.08s;
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
       transform: scale(1);
       z-index: 5;
     }
     @for $m from 1 through $li {
       .spread:nth-child(#{$m}) {
+        -webkit-transform: rotate(45 + $deg * $m);
+        -ms-transform: rotate(45 + $deg * $m);
         transform: rotate(45 + $deg * $m);
         .unit {
+          -webkit-transform: rotate(-$deg * $m + 720 - 45);
+          -ms-transform: rotate(-$deg * $m + 720 - 45);
           transform: rotate(-$deg * $m + 720 - 45);
         }
       }
@@ -208,6 +233,8 @@ $text_color_section2: #395084;
   .spread {
     top: -($offset);
     left: -($offset);
+    -webkit-transform-origin: $offset $offset;
+    -ms-transform-origin: $offset $offset;
     transform-origin: $offset $offset;
   }
 }
@@ -223,6 +250,7 @@ $text_color_section2: #395084;
 
   .section-about-vitamin-mineral {
     margin-top: -380px;
+    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     width: 100%;
     min-height: 1120px;
@@ -236,7 +264,12 @@ $text_color_section2: #395084;
       display: block;
       height: 500px;
       width: 100%;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
       flex-flow: row wrap;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
       .section-header_center {
         @include format-text(48px, $text_color_section2, "Museo Sans Cyrl 300");
@@ -267,6 +300,8 @@ $text_color_section2: #395084;
       opacity: 1.0;
     }
     @include greate_circle(-300, -325, $icon-size);
+    -webkit-transition: 0.24s 0.2s;
+    -o-transition: 0.24s 0.2s;
     transition: 0.24s 0.2s;
 
     .badge {
@@ -275,6 +310,8 @@ $text_color_section2: #395084;
       position: relative;
       width: 400px;
       border-radius: 30%;
+      -webkit-transform: rotate(-70deg);
+      -ms-transform: rotate(-70deg);
       transform: rotate(-70deg);
     }
 
@@ -288,42 +325,66 @@ $text_color_section2: #395084;
     .char1 {
       font-size: 35px;
       font-family: "Museo Sans Cyrl 500";
+      -webkit-transform: rotate(4deg);
+      -ms-transform: rotate(4deg);
       transform: rotate(4deg);
     }
     .char2 {
+      -webkit-transform: rotate(8deg);
+      -ms-transform: rotate(8deg);
       transform: rotate(8deg);
     }
     .char3 {
+      -webkit-transform: rotate(12deg);
+      -ms-transform: rotate(12deg);
       transform: rotate(12deg);
     }
     .char4 {
+      -webkit-transform: rotate(16deg);
+      -ms-transform: rotate(16deg);
       transform: rotate(16deg);
     }
     .char5 {
+      -webkit-transform: rotate(20deg);
+      -ms-transform: rotate(20deg);
       transform: rotate(20deg);
     }
     .char6 {
+      -webkit-transform: rotate(24deg);
+      -ms-transform: rotate(24deg);
       transform: rotate(24deg);
     }
     .char7 {
+      -webkit-transform: rotate(28deg);
+      -ms-transform: rotate(28deg);
       transform: rotate(28deg);
     }
     .char8 {
+      -webkit-transform: rotate(32deg);
+      -ms-transform: rotate(32deg);
       transform: rotate(32deg);
     }
     .char9 {
+      -webkit-transform: rotate(36deg);
+      -ms-transform: rotate(36deg);
       transform: rotate(36deg);
     }
     .char10 {
+      -webkit-transform: rotate(40deg);
+      -ms-transform: rotate(40deg);
       transform: rotate(40deg);
     }
     .char11 {
+      -webkit-transform: rotate(44deg);
+      -ms-transform: rotate(44deg);
       transform: rotate(44deg);
     }
     .char12 {
       font-size: 35px;
       font-family: "Museo Sans Cyrl 500";
       margin-top: -8px;
+      -webkit-transform: rotate(48deg);
+      -ms-transform: rotate(48deg);
       transform: rotate(48deg);
     }
     .char13 {
@@ -331,12 +392,18 @@ $text_color_section2: #395084;
       font-family: "Museo Sans Cyrl 500";
       margin-top: -5px;
       margin-left: 3px;
+      -webkit-transform: rotate(52deg);
+      -ms-transform: rotate(52deg);
       transform: rotate(52deg);
     }
     .char14 {
+      -webkit-transform: rotate(56deg);
+      -ms-transform: rotate(56deg);
       transform: rotate(56deg);
     }
     .char15 {
+      -webkit-transform: rotate(60deg);
+      -ms-transform: rotate(60deg);
       transform: rotate(60deg);
     }
     .img-in_absolute_circle {
@@ -346,35 +413,66 @@ $text_color_section2: #395084;
 
   .menu {
     @include menu_greate($menu-position, $menu-size);
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
     transform: scale(0);
+    -webkit-transition: -webkit-transform 1.4s 0.07s;
+    transition: -webkit-transform 1.4s 0.07s;
+    -o-transition: transform 1.4s 0.07s;
     transition: transform 1.4s 0.07s;
+    transition: transform 1.4s 0.07s, -webkit-transform 1.4s 0.07s;
   }
 
   .spread {
     position: absolute;
     top: -($offset);
     left: -($offset);
+    -webkit-transform-origin: $offset $offset;
+    -ms-transform-origin: $offset $offset;
     transform-origin: $offset $offset;
+    -webkit-transition: all 0.5s 0.1s;
+    -o-transition: all 0.5s 0.1s;
     transition: all 0.5s 0.1s;
   }
 
   .section-circle_absolute_center:hover {
     .menu {
+      -webkit-transition: z-index 0s 0.5s,
+      -webkit-transform 0.4s 0.08s;
+      transition: z-index 0s 0.5s,
+      -webkit-transform 0.4s 0.08s;
+      -o-transition: transform 0.4s 0.08s,
+      z-index 0s 0.5s;
       transition: transform 0.4s 0.08s,
       z-index 0s 0.5s;
+      transition: transform 0.4s 0.08s,
+      z-index 0s 0.5s,
+      -webkit-transform 0.4s 0.08s;
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
       transform: scale(1);
       z-index: 5;
     }
     .spread, .unit {
+      -webkit-transition: all 1.6s;
+      -o-transition: all 1.6s;
       transition: all 1.6s;
     }
 
     @for $m from 1 through $li {
       .spread:nth-child(#{$m}) {
+        -webkit-transition-delay: $m * 0.2s;
+        -o-transition-delay: $m * 0.2s;
         transition-delay: $m * 0.2s;
+        -webkit-transform: rotate(45 + $deg * $m);
+        -ms-transform: rotate(45 + $deg * $m);
         transform: rotate(45 + $deg * $m);
         .unit {
+          -webkit-transition-delay: $m * 0.4s;
+          -o-transition-delay: $m * 0.4s;
           transition-delay: $m * 0.4s;
+          -webkit-transform: rotate(-$deg * $m + 720 - 45);
+          -ms-transform: rotate(-$deg * $m + 720 - 45);
           transform: rotate(-$deg * $m + 720 - 45);
         }
       }
@@ -383,17 +481,23 @@ $text_color_section2: #395084;
 
   .unit {
     @include unit-great($unit-size);
+    -webkit-transition: 0.6s;
+    -o-transition: 0.6s;
     transition: 0.6s;
     .p1 {
       @include format-text(36px, $text_color_section2, "Museo Sans Cyrl 500");
       margin-top: 55px;
       @include hover-item-scale(1.2);
+      -webkit-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
       transition: all 0.3s ease;
     }
     .p2 {
       @include format-text(18px, $text_color_section2, "Museo Sans Cyrl 500");
       margin-top: 20px;
       @include hover-item-scale(1.2);
+      -webkit-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
       transition: all 0.3s ease;
     }
   }
@@ -406,6 +510,7 @@ $text_color_section2: #395084;
   }
   .section-about-vitamin-mineral {
     margin-top: -380px;
+    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     width: 100%;
     min-height: 100%;
@@ -420,10 +525,17 @@ $text_color_section2: #395084;
     }
     .section-about-vitamin-mineral-colum {
       float: left;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       height: 1120px;
       width: 33.33%;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
       flex-flow: row wrap;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
       ul {
         margin: auto auto auto 50%;
@@ -443,6 +555,8 @@ $text_color_section2: #395084;
         list-style: none;
         text-align: left;
         @include hover-item-scale(1.2);
+        -webkit-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
         transition: all 0.2s linear;
       }
     }

@@ -12,68 +12,162 @@ $text_color: #395084;
 @mixin create-animation-img($marg_top,$marg_left,$name-animation,$second) {
   margin-top: $marg_top;
   margin-left: $marg_left;
+  -webkit-animation-name: $name-animation;
   animation-name: $name-animation;
+  -webkit-animation-duration: $second;
   animation-duration: $second;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes floating {
+  from {
+    -webkit-transform: translate(0, 0px);
+    transform: translate(0, 0px);
+  }
+  65% {
+    -webkit-transform: translate(0, 15px);
+    transform: translate(0, 15px);
+  }
+  to {
+    -webkit-transform: translate(0, -0px);
+    transform: translate(0, -0px);
+  }
 }
 
 @keyframes floating {
   from {
+    -webkit-transform: translate(0, 0px);
     transform: translate(0, 0px);
   }
   65% {
+    -webkit-transform: translate(0, 15px);
     transform: translate(0, 15px);
   }
   to {
+    -webkit-transform: translate(0, -0px);
+    transform: translate(0, -0px);
+  }
+}
+
+@-webkit-keyframes floating2 {
+  from {
+    -webkit-transform: translate(0, 0px);
+    transform: translate(0, 0px);
+  }
+  65% {
+    -webkit-transform: translate(0, -15px);
+    transform: translate(0, -15px);
+  }
+  to {
+    -webkit-transform: translate(0, -0px);
     transform: translate(0, -0px);
   }
 }
 
 @keyframes floating2 {
   from {
+    -webkit-transform: translate(0, 0px);
     transform: translate(0, 0px);
   }
   65% {
+    -webkit-transform: translate(0, -15px);
     transform: translate(0, -15px);
   }
   to {
+    -webkit-transform: translate(0, -0px);
+    transform: translate(0, -0px);
+  }
+}
+
+@-webkit-keyframes circle {
+  from {
+    -webkit-transform: translate(0, 0px);
+    transform: translate(0, 0px);
+  }
+  50% {
+    -webkit-transform: translate(-50px, -50px);
+    transform: translate(-50px, -50px);
+  }
+  to {
+    -webkit-transform: translate(0, -0px);
     transform: translate(0, -0px);
   }
 }
 
 @keyframes circle {
   from {
+    -webkit-transform: translate(0, 0px);
     transform: translate(0, 0px);
   }
   50% {
+    -webkit-transform: translate(-50px, -50px);
     transform: translate(-50px, -50px);
   }
   to {
+    -webkit-transform: translate(0, -0px);
+    transform: translate(0, -0px);
+  }
+}
+
+@-webkit-keyframes circle2 {
+  from {
+    -webkit-transform: translate(0, 0px);
+    transform: translate(0, 0px);
+  }
+  50% {
+    -webkit-transform: translate(-50px, 0px);
+    transform: translate(-50px, 0px);
+  }
+  to {
+    -webkit-transform: translate(0, -0px);
     transform: translate(0, -0px);
   }
 }
 
 @keyframes circle2 {
   from {
+    -webkit-transform: translate(0, 0px);
     transform: translate(0, 0px);
   }
   50% {
+    -webkit-transform: translate(-50px, 0px);
     transform: translate(-50px, 0px);
   }
   to {
+    -webkit-transform: translate(0, -0px);
     transform: translate(0, -0px);
+  }
+}
+
+@-webkit-keyframes latidos {
+  from {
+    -webkit-transform: none;
+    transform: none;
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  to {
+    -webkit-transform: none;
+    transform: none;
   }
 }
 
 @keyframes latidos {
   from {
+    -webkit-transform: none;
     transform: none;
   }
   50% {
+    -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
   to {
+    -webkit-transform: none;
     transform: none;
   }
 }
@@ -86,26 +180,25 @@ $text_color: #395084;
     height: 1600px;
     background: $section_background_color;
     .content {
-      height: auto;
-      position: absolute;
+      display: inline-block;
       width: 80%;
       margin-left: 10%;
       .head {
         margin-top: 100px;
         .health_hed1 {
-          @include format-text(60px, $number_color_higest, "Museo Sans Cyrl 100");
+          @include format-text(48px, $number_color_higest, "Museo Sans Cyrl 100");
           text-transform: uppercase;
+          display: block;
           font-weight: 100;
           width: 100%;
-          display: block;
           text-align: center;
         }
         .health_hed2 {
-          @include format-text(60px, $number_color_higest, "Museo Sans Cyrl 700");
-          text-transform: uppercase;
-          font-weight: 700;
-          width: 100%;
+          @include format-text(48px, $number_color_higest, "Museo Sans Cyrl 700");
           display: block;
+          text-transform: uppercase;
+          width: 100%;
+          font-weight: 700;
           text-align: center;
         }
       }
@@ -121,19 +214,7 @@ $text_color: #395084;
     height: auto;
     float: left;
     display: inline-block;
-    //transition: all 0.5s linear;
-    //&:hover {
-    //  border-radius: 30px;
-    //  -webkit-box-shadow: 10px 10px 146px -24px rgba(0, 0, 0, 0.75);
-    //  -moz-box-shadow: 10px 10px 146px -24px rgba(0, 0, 0, 0.75);
-    //  box-shadow: 10px 10px 146px -24px rgba(0, 0, 0, 0.75);
-    //  background: rgba(212, 228, 239, 0.7);
-    //  margin-left: 2%;
-    //  padding: 10px;
-    //  h2 {
-    //    color: white;
-    //  }
-    //}
+
     span {
       @include format-text(100px, $number_color_higest, "Museo Sans Cyrl 700");
       margin: 0;
@@ -344,4 +425,3 @@ $text_color: #395084;
     }
   }
 }
-
